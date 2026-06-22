@@ -72,6 +72,125 @@
   </div>
 </header>
 
+<style>
+  #aqDemo .iscreen{background:linear-gradient(170deg,#0b1220,#0e2a3a);color:#fff}
+  #aqDemo .iview{bottom:0}
+  #aqDemo .aqhead{padding:42px 16px 10px;text-align:center;flex-shrink:0}
+  #aqDemo .aqhead b{font-family:'Sora';font-weight:800;font-size:16px}
+  #aqDemo .aqhead span{display:block;font-size:11px;color:#5eead4;font-weight:600;margin-top:2px}
+  #aqDemo .aqhome{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:16px}
+  #aqDemo .bigbtn{width:138px;height:138px;border-radius:50%;border:none;cursor:pointer;color:#fff;font-family:inherit;font-weight:800;font-size:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:linear-gradient(135deg,#475569,#334155);transition:.25s}
+  #aqDemo .bigbtn .em{font-size:34px}
+  #aqDemo .bigbtn.on{background:linear-gradient(135deg,#14b8a6,#0d9488);box-shadow:0 0 0 8px rgba(20,184,166,.18),0 0 0 18px rgba(20,184,166,.08)}
+  #aqDemo .aqstatus{font-size:12px;color:#93b3c4;text-align:center;min-height:16px}
+  #aqDemo .plist{width:100%;display:flex;flex-direction:column;gap:8px}
+  #aqDemo .prow{display:flex;align-items:center;gap:9px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:9px 11px;cursor:pointer;font-family:inherit;color:#fff;text-align:left;transition:.15s}
+  #aqDemo .prow:hover{background:rgba(20,184,166,.15);border-color:rgba(20,184,166,.4)}
+  #aqDemo .prow .av{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex-shrink:0}
+  #aqDemo .prow b{font-size:13px;display:block}
+  #aqDemo .prow small{font-size:10.5px;color:#93b3c4}
+  #aqDemo .chat{flex:1;display:flex;flex-direction:column}
+  #aqDemo .chathead{display:flex;align-items:center;gap:9px;padding:40px 12px 10px;border-bottom:1px solid rgba(255,255,255,.1);flex-shrink:0}
+  #aqDemo .chathead .back{background:none;border:none;color:#5eead4;font-size:20px;cursor:pointer;padding:0 4px}
+  #aqDemo .timer{margin-left:auto;font-size:11px;background:rgba(20,184,166,.18);color:#5eead4;border-radius:99px;padding:3px 9px;font-weight:700}
+  #aqDemo .msgs{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
+  #aqDemo .msg{max-width:78%;padding:8px 11px;border-radius:13px;font-size:12.5px;line-height:1.4}
+  #aqDemo .msg.them{background:rgba(255,255,255,.1);align-self:flex-start;border-bottom-left-radius:4px}
+  #aqDemo .msg.me{background:#0d9488;align-self:flex-end;border-bottom-right-radius:4px}
+  #aqDemo .composer{display:flex;gap:7px;padding:10px;border-top:1px solid rgba(255,255,255,.1);flex-shrink:0}
+  #aqDemo .composer input{flex:1;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;border-radius:99px;padding:9px 13px;font-size:12.5px;outline:none;font-family:inherit}
+  #aqDemo .composer button{background:#14b8a6;border:none;color:#fff;border-radius:50%;width:38px;height:38px;cursor:pointer;font-size:15px;flex-shrink:0}
+</style>
+<section class="section" style="background:var(--bg3)">
+  <div class="wrap">
+    <div class="demo">
+      <div class="demo-txt">
+        <h2>Essayez Au Quartier</h2>
+        <p>Cliquez sur le gros bouton pour devenir disponible, choisissez une personne proche et lancez une discussion éphémère — exactement comme dans l'app.</p>
+        <span class="demo-hint">👆 Touchez « Je suis dispo »</span>
+      </div>
+      <div class="iphone" style="--accent:#0d9488" id="aqDemo">
+        <div class="iscreen">
+          <div class="ihole"></div>
+
+          <div class="iview" data-view="home">
+            <div class="aqhead"><b>Au Quartier</b><span id="aqLoc">📍 Appuyez pour vous rendre disponible</span></div>
+            <div class="aqhome">
+              <button class="bigbtn" id="aqBtn"><span class="em">👋</span><span id="aqBtnTxt">Je suis<br>dispo</span></button>
+              <div class="aqstatus" id="aqStatus">Vous êtes invisible pour l'instant</div>
+              <div class="plist" id="aqList" hidden>
+                <button class="prow" onclick="aqChat('Awa','#f59e0b','Awa','Salut 👋 toi aussi dans le coin ?')"><span class="av" style="background:#f59e0b">A</span><span><b>Awa · 26</b><small>à 300 m · dispo</small></span></button>
+                <button class="prow" onclick="aqChat('Koffi','#3b82f6','Koffi','Yo ! Tu connais un bon maquis par ici ?')"><span class="av" style="background:#3b82f6">K</span><span><b>Koffi · 31</b><small>à 550 m · dispo</small></span></button>
+                <button class="prow" onclick="aqChat('Mariam','#a855f7','Mariam','Coucou 🙂')"><span class="av" style="background:#a855f7">M</span><span><b>Mariam · 24</b><small>à 800 m · dispo</small></span></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="iview" data-view="chat" hidden>
+            <div class="chat">
+              <div class="chathead">
+                <button class="back" onclick="aqBack()">‹</button>
+                <span class="av" id="aqcAv" style="width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px"></span>
+                <b id="aqcName" style="font-size:13px"></b>
+                <span class="timer" id="aqTimer">⏳ 30:00</span>
+              </div>
+              <div class="msgs" id="aqMsgs"></div>
+              <div class="composer">
+                <input id="aqInput" placeholder="Écrire un message…" onkeydown="if(event.key==='Enter')aqSend()" />
+                <button onclick="aqSend()">➤</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- pas de tabs : navigation par les boutons -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var phone=document.getElementById('aqDemo');
+  var views=phone.querySelectorAll('.iview');
+  function show(v){views.forEach(function(x){x.hidden=x.getAttribute('data-view')!==v;});}
+  var btn=document.getElementById('aqBtn'),list=document.getElementById('aqList');
+  var available=false;
+  btn.addEventListener('click',function(){
+    available=!available;
+    btn.classList.toggle('on',available);
+    document.getElementById('aqBtnTxt').innerHTML=available?'Je suis<br>dispo ✓':'Je suis<br>dispo';
+    document.getElementById('aqStatus').textContent=available?'✅ Vous êtes visible — 3 personnes proches':'Vous êtes invisible pour l\'instant';
+    document.getElementById('aqLoc').textContent=available?'📍 Cocody · visible à 1 km':'📍 Appuyez pour vous rendre disponible';
+    list.hidden=!available;
+  });
+  var timerInt;
+  window.aqChat=function(name,color,who,first){
+    document.getElementById('aqcName').textContent=name;
+    var av=document.getElementById('aqcAv');av.textContent=name.charAt(0);av.style.background=color;
+    var box=document.getElementById('aqMsgs');box.innerHTML='<div class="msg them">'+first+'</div>';
+    show('chat');
+    // minuteur 30 min décroissant (accéléré pour la démo : 1s = 1 min visuelle? on garde réaliste mn:ss)
+    var total=30*60;clearInterval(timerInt);
+    var el=document.getElementById('aqTimer');
+    timerInt=setInterval(function(){
+      total--;if(total<0){clearInterval(timerInt);box.innerHTML+='<div class="msg them" style="opacity:.7">⏳ La discussion s\'est effacée.</div>';return;}
+      var m=Math.floor(total/60),s=total%60;el.textContent='⏳ '+m+':'+(s<10?'0':'')+s;
+    },1000);
+    document.getElementById('aqInput').focus();
+  };
+  window.aqBack=function(){clearInterval(timerInt);show('home');};
+  window.aqSend=function(){
+    var inp=document.getElementById('aqInput'),v=inp.value.trim();if(!v)return;
+    var box=document.getElementById('aqMsgs');
+    box.innerHTML+='<div class="msg me">'+v.replace(/</g,'&lt;')+'</div>';inp.value='';box.scrollTop=box.scrollHeight;
+    setTimeout(function(){
+      var rep=['Haha j\'adore 😄','Carrément !','Tu fais quoi ce soir ?','Trop bien 🙌','On se capte alors ?'];
+      box.innerHTML+='<div class="msg them">'+rep[Math.floor(Math.random()*rep.length)]+'</div>';box.scrollTop=box.scrollHeight;
+    },900);
+  };
+})();
+</script>
+
 <section class="section" id="concept">
   <div class="wrap">
     <p class="lead-intro">Pas de match, pas de swipe, pas d'humiliation. Vous voyez les personnes disponibles autour de vous, vous écrivez directement à qui vous voulez, et la discussion s'efface au bout de 30 minutes. Édité par <a href="/a-propos.html" style="color:var(--green);font-weight:600">EGSCI</a>.</p>

@@ -56,6 +56,85 @@
   </div>
 </header>
 
+<style>
+  .evwin{width:100%;max-width:560px;background:#0d1117;border-radius:14px;overflow:hidden;box-shadow:0 40px 90px rgba(13,17,23,.4);border:1px solid rgba(255,255,255,.1)}
+  .evbar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#161b22;border-bottom:1px solid rgba(255,255,255,.07)}
+  .evbar .dot{width:11px;height:11px;border-radius:50%}
+  .evtabs{display:flex;background:#0d1117;border-bottom:1px solid rgba(255,255,255,.07)}
+  .evtabs button{flex:1;border:none;background:none;color:#8b97a7;cursor:pointer;font-family:inherit;font-size:12.5px;font-weight:600;padding:12px 8px;border-bottom:2px solid transparent;transition:.15s}
+  .evtabs button.on{color:#fff;border-bottom-color:#2563eb;background:rgba(37,99,235,.08)}
+  .evbody{padding:18px;min-height:230px;color:#c9d4e0;font-size:13px}
+  .evbody[hidden]{display:none}
+  .evrow{display:flex;align-items:center;gap:10px;padding:9px 11px;background:#161b22;border:1px solid rgba(255,255,255,.06);border-radius:8px;margin-bottom:7px;font-size:12.5px}
+  .evrow .tag{margin-left:auto;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:99px}
+  .evrun{display:flex;gap:9px;align-items:center;margin-bottom:14px}
+  .evrun input{flex:1;background:#0d1117;border:1px solid rgba(255,255,255,.14);color:#fff;border-radius:8px;padding:9px 12px;font-size:12.5px;outline:none;font-family:inherit}
+  .evrun button{background:#2563eb;border:none;color:#fff;border-radius:8px;padding:9px 16px;font-weight:600;cursor:pointer;font-family:inherit;font-size:12.5px;white-space:nowrap}
+  .evbar-prog{height:6px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden;margin:4px 0 14px}
+  .evbar-prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,#2563eb,#7c3aed);transition:width .4s}
+</style>
+<section class="section" style="background:var(--bg3)">
+  <div class="wrap">
+    <div class="demo">
+      <div class="demo-txt">
+        <h2>Aperçu interactif</h2>
+        <p>EvoStudio réunit 3 outils dans une seule application de bureau. Cliquez sur les onglets et lancez une démo de chaque module.</p>
+        <span class="demo-hint">👆 Changez d'onglet et cliquez « Lancer »</span>
+      </div>
+      <div class="evwin" id="evDemo">
+        <div class="evbar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span style="margin-left:8px;color:#8b97a7;font-size:12px">EvoStudio</span></div>
+        <div class="evtabs">
+          <button data-tab="ext" class="on">🔍 Extracteur</button>
+          <button data-tab="ver">✅ Vérificateur</button>
+          <button data-tab="snd">📤 Sender</button>
+        </div>
+
+        <div class="evbody" data-body="ext">
+          <div class="evrun"><input id="evExtQ" value="restaurants abidjan" /><button onclick="evExt()">Extraire</button></div>
+          <div class="evbar-prog"><i id="evExtBar"></i></div>
+          <div id="evExtOut" style="color:#8b97a7">Cliquez sur « Extraire » pour collecter des adresses…</div>
+        </div>
+
+        <div class="evbody" data-body="ver" hidden>
+          <div class="evrun"><input value="3 412 adresses chargées" readonly /><button onclick="evVer()">Vérifier</button></div>
+          <div class="evbar-prog"><i id="evVerBar"></i></div>
+          <div id="evVerOut" style="color:#8b97a7">Lancez la vérification (syntaxe + MX + SMTP)…</div>
+        </div>
+
+        <div class="evbody" data-body="snd" hidden>
+          <div class="evrow">📋 Campagne : <b style="color:#fff">Promo juin</b><span class="tag" style="background:rgba(34,197,94,.15);color:#4ade80">Prête</span></div>
+          <div class="evrun"><input value="2 980 destinataires valides" readonly /><button onclick="evSnd()">Envoyer</button></div>
+          <div class="evbar-prog"><i id="evSndBar"></i></div>
+          <div id="evSndOut" style="color:#8b97a7">Rotation multi-SMTP prête. Cliquez « Envoyer »…</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var win=document.getElementById('evDemo');
+  var tabs=win.querySelectorAll('.evtabs button');
+  var bodies=win.querySelectorAll('.evbody');
+  tabs.forEach(function(b){b.addEventListener('click',function(){
+    tabs.forEach(function(t){t.classList.remove('on');});b.classList.add('on');
+    var v=b.getAttribute('data-tab');
+    bodies.forEach(function(x){x.hidden=x.getAttribute('data-body')!==v;});
+  });});
+  function run(bar,out,steps,done){
+    var i=0;bar.style.width='0';
+    var iv=setInterval(function(){
+      i++;bar.style.width=Math.min(i*20,100)+'%';
+      if(i>=5){clearInterval(iv);out.style.color='#c9d4e0';out.innerHTML=done;}
+    },380);
+    out.style.color='#8b97a7';out.textContent=steps;
+  }
+  window.evExt=function(){run(document.getElementById('evExtBar'),document.getElementById('evExtOut'),'Recherche en cours…','✅ <b style="color:#fff">1 248</b> adresses collectées · export CSV/TXT/JSON prêt.');};
+  window.evVer=function(){run(document.getElementById('evVerBar'),document.getElementById('evVerOut'),'Tests MX + SMTP…','✅ <b style="color:#fff">2 980</b> valides · 432 invalides retirées · rebond &lt; 2%.');};
+  window.evSnd=function(){run(document.getElementById('evSndBar'),document.getElementById('evSndOut'),'Envoi via rotation SMTP…','✅ <b style="color:#fff">2 980</b> emails envoyés · 41% ouvertures en 1 h.');};
+})();
+</script>
+
 <section class="section">
   <div class="wrap">
     <p class="lead-intro">EvoStudio est le produit phare édité par <a href="/a-propos.html" style="color:var(--green);font-weight:600">EGSCI</a>. Pensée pour les professionnels du marketing, les agences et les indépendants, la suite réunit toute la chaîne de l'emailing dans des logiciels rapides, sûrs et respectueux de vos données.</p>
