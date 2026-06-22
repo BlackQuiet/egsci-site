@@ -205,6 +205,31 @@ section{padding:96px 0}
 .pg-role{font-size:12.5px;color:var(--slate-2);font-weight:600;margin-bottom:11px}
 .pg-card p{font-size:13.8px;color:var(--slate);margin-bottom:18px;flex:1;line-height:1.6}
 .pg-link{font-weight:700;font-size:13.5px;display:inline-flex;align-items:center;gap:5px;align-self:flex-start}
+.pg-card.app{padding:0;overflow:hidden}
+.pg-head{position:relative;height:172px;overflow:hidden;display:flex;justify-content:center;align-items:flex-start}
+.pg-head.evo{background:linear-gradient(160deg,#0d1117,#10203f)}
+.pg-head.mv{background:linear-gradient(160deg,#161210,#2a1606)}
+.pg-head.aq{background:linear-gradient(160deg,#08201e,#0b2f35)}
+.pg-head .shot{width:84%;margin-top:24px;border-radius:8px 8px 0 0;border:1px solid rgba(255,255,255,.12);box-shadow:0 -4px 26px rgba(0,0,0,.45)}
+.pg-body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+.mphone{width:120px;flex-shrink:0;margin-top:20px;background:#0b1220;border-radius:22px;padding:4px;box-shadow:0 16px 32px rgba(0,0,0,.42),inset 0 0 0 1px rgba(255,255,255,.12)}
+.mphone .ms{width:100%;height:206px;border-radius:18px;overflow:hidden;position:relative;display:flex;flex-direction:column;background:#fff}
+.mphone .mh{position:absolute;top:6px;left:50%;transform:translateX(-50%);width:36px;height:5px;border-radius:99px;background:#000;opacity:.6;z-index:6}
+.mphone .mhole{position:absolute;top:6px;left:50%;transform:translateX(-50%);width:6px;height:6px;border-radius:50%;background:#000;z-index:6}
+/* mini Ma Vigi */
+.mmv-top{background:linear-gradient(135deg,var(--ci-orange),var(--ci-orange-dk));color:#fff;padding:16px 10px 8px;font-family:'Sora';font-weight:800;font-size:10px;text-align:center;flex-shrink:0}
+.mmv-map{flex:1;position:relative;background:repeating-linear-gradient(0deg,#eef5ef 0 1px,transparent 1px 22px),repeating-linear-gradient(90deg,#eef5ef 0 1px,transparent 1px 22px),#f4f9f5}
+.mmv-pin{position:absolute;top:54px;left:52px;width:20px;height:20px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--ci-red);display:flex;align-items:center;justify-content:center;box-shadow:0 3px 8px rgba(0,0,0,.3)}
+.mmv-pin i{transform:rotate(45deg);font-style:normal;font-size:9px}
+.mmv-pin:after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--ci-red);opacity:.5;animation:ping 1.8s infinite}
+.mmv-card{position:absolute;left:8px;right:8px;bottom:10px;background:#fff;border-radius:9px;padding:7px 8px;box-shadow:0 6px 16px rgba(0,0,0,.16);font-size:8.5px}
+.mmv-card b{font-size:9.5px;color:#1a1a2e}
+/* mini Au Quartier */
+.maq{flex:1;background:linear-gradient(170deg,#0b1220,#0e2a3a);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:14px 10px;color:#fff}
+.maq .btn-disp{width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,#14b8a6,#0d9488);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:9px;font-weight:800;text-align:center;line-height:1.1;box-shadow:0 0 0 6px rgba(20,184,166,.16)}
+.maq .btn-disp span{font-size:20px}
+.maq .maq-row{display:flex;align-items:center;gap:5px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:99px;padding:4px 9px;font-size:8px;color:#dbe7ee}
+.maq .maq-row i{width:14px;height:14px;border-radius:50%;font-style:normal;display:inline-flex;align-items:center;justify-content:center;font-size:7px;font-weight:800;color:#fff}
 @media(max-width:900px){.prodgrid{grid-template-columns:1fr}}
 
 /* SUR MESURE */
@@ -353,29 +378,56 @@ footer{background:var(--night);color:#9aa6a0;padding:62px 0 30px;font-size:14px}
     </div>
 
     <div class="prodgrid">
-      <div class="pg-card">
-        <div class="pg-ic" style="background:#eff6ff;color:#2563eb">📧</div>
-        <span class="pg-tag" style="background:#dcfce7;color:#15803d">● En ligne</span>
-        <h3>EvoStudio</h3>
-        <div class="pg-role">Suite d'emailing professionnelle</div>
-        <p>Extraire, vérifier et envoyer vos emails en masse — 100% en local, haute délivrabilité.</p>
-        <a href="/evostudio.html" class="pg-link" style="color:#2563eb">En savoir plus →</a>
+      <!-- EvoStudio -->
+      <div class="pg-card app">
+        <div class="pg-head evo"><img src="/Hub.png" alt="Aperçu EvoStudio" class="shot" loading="lazy" /></div>
+        <div class="pg-body">
+          <span class="pg-tag" style="background:#dcfce7;color:#15803d">● En ligne</span>
+          <h3>EvoStudio</h3>
+          <div class="pg-role">Suite d'emailing professionnelle</div>
+          <p>Extraire, vérifier et envoyer vos emails en masse — 100% en local, haute délivrabilité.</p>
+          <a href="/evostudio.html" class="pg-link" style="color:#2563eb">En savoir plus →</a>
+        </div>
       </div>
-      <div class="pg-card">
-        <div class="pg-ic" style="background:#fff4e6;color:#d46a00">🛡️</div>
-        <span class="pg-tag" style="background:#fff4e6;color:#d46a00">● Bientôt</span>
-        <h3>Ma Vigi</h3>
-        <div class="pg-role">Sécurité citoyenne · Côte d'Ivoire</div>
-        <p>Signalez les dangers en temps réel et alertez votre communauté autour de vous.</p>
-        <a href="/ma-vigi.html" class="pg-link" style="color:#d46a00">En savoir plus →</a>
+      <!-- Ma Vigi -->
+      <div class="pg-card app">
+        <div class="pg-head mv">
+          <div class="mphone"><div class="ms">
+            <div class="mhole"></div>
+            <div class="mmv-top">🛡️ Ma Vigi 🇨🇮</div>
+            <div class="mmv-map">
+              <div class="mmv-pin"><i>🔥</i></div>
+              <div class="mmv-card"><b>Incendie signalé</b><br>Cocody · il y a 2 min</div>
+            </div>
+          </div></div>
+        </div>
+        <div class="pg-body">
+          <span class="pg-tag" style="background:#fff4e6;color:#d46a00">● Bientôt</span>
+          <h3>Ma Vigi</h3>
+          <div class="pg-role">Sécurité citoyenne · Côte d'Ivoire</div>
+          <p>Signalez les dangers en temps réel et alertez votre communauté autour de vous.</p>
+          <a href="/ma-vigi.html" class="pg-link" style="color:#d46a00">En savoir plus →</a>
+        </div>
       </div>
-      <div class="pg-card">
-        <div class="pg-ic" style="background:#f0fdfa;color:#0d9488">👋</div>
-        <span class="pg-tag" style="background:#ccfbf1;color:#0f766e">● Bientôt</span>
-        <h3>Au Quartier</h3>
-        <div class="pg-role">Rencontres de quartier bienveillantes</div>
-        <p>Un clic pour discuter avec des personnes à 1 km, sans swipe et en toute bienveillance.</p>
-        <a href="/au-quartier.html" class="pg-link" style="color:#0d9488">En savoir plus →</a>
+      <!-- Au Quartier -->
+      <div class="pg-card app">
+        <div class="pg-head aq">
+          <div class="mphone"><div class="ms">
+            <div class="mhole"></div>
+            <div class="maq">
+              <div class="btn-disp"><span>👋</span>Je suis<br>dispo</div>
+              <div class="maq-row"><i style="background:#f59e0b">A</i> Awa · 300 m</div>
+              <div class="maq-row"><i style="background:#3b82f6">K</i> Koffi · 550 m</div>
+            </div>
+          </div></div>
+        </div>
+        <div class="pg-body">
+          <span class="pg-tag" style="background:#ccfbf1;color:#0f766e">● Bientôt</span>
+          <h3>Au Quartier</h3>
+          <div class="pg-role">Rencontres de quartier bienveillantes</div>
+          <p>Un clic pour discuter avec des personnes à 1 km, sans swipe et en toute bienveillance.</p>
+          <a href="/au-quartier.html" class="pg-link" style="color:#0d9488">En savoir plus →</a>
+        </div>
       </div>
     </div>
   </div>
