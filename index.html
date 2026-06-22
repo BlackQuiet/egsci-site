@@ -3,159 +3,229 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>EGS Côte d'Ivoire — Éditeur de solutions logicielles & numériques</title>
-<meta name="description" content="EGSCI (EGS Côte d'Ivoire) est une société technologique basée à Abidjan, éditrice de logiciels professionnels et fournisseur de solutions numériques. Créatrice de la suite EvoStudio." />
-<meta name="keywords" content="EGSCI, EGS Côte d'Ivoire, édition logicielle Abidjan, entreprise technologique Côte d'Ivoire, EvoStudio, solutions numériques, développement logiciel" />
+<title>EGS Côte d'Ivoire — Studio de logiciels & solutions numériques</title>
+<meta name="description" content="EGSCI (EGS Côte d'Ivoire) est un studio technologique basé à Abidjan. Nous éditons des produits — EvoStudio (emailing) et Ma Vigie (sécurité citoyenne) — et concevons des applications sur mesure." />
+<meta name="keywords" content="EGSCI, EGS Côte d'Ivoire, EvoStudio, Ma Vigie, développement application Abidjan, logiciel sur mesure Côte d'Ivoire, application mobile Flutter, studio numérique" />
 <meta name="author" content="EGSCI SARL" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
-<meta name="theme-color" content="#16a34a" />
+<meta name="theme-color" content="#0c1410" />
 <link rel="canonical" href="https://egs.ci/" />
 <link rel="icon" href="/logo-EvoSender.ico" type="image/x-icon" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="EGS Côte d'Ivoire" />
 <meta property="og:locale" content="fr_FR" />
-<meta property="og:title" content="EGS Côte d'Ivoire — Éditeur de solutions logicielles & numériques" />
-<meta property="og:description" content="Société technologique basée à Abidjan, éditrice de la suite EvoStudio et de solutions numériques pour les professionnels." />
+<meta property="og:title" content="EGS Côte d'Ivoire — Studio de logiciels & solutions numériques" />
+<meta property="og:description" content="Studio technologique à Abidjan. Éditeur d'EvoStudio et de Ma Vigie, créateur d'applications sur mesure." />
 <meta property="og:url" content="https://egs.ci/" />
 <meta property="og:image" content="https://egs.ci/logo-egsci.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="EGS Côte d'Ivoire" />
-<meta name="twitter:description" content="Éditeur de solutions logicielles & numériques — Abidjan, Côte d'Ivoire." />
+<meta name="twitter:description" content="Studio de logiciels & solutions numériques — Abidjan, Côte d'Ivoire." />
 <meta name="twitter:image" content="https://egs.ci/logo-egsci.png" />
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
- {"@type":"Organization","@id":"https://egs.ci/#org","name":"EGS Côte d'Ivoire","legalName":"EGSCI SARL","alternateName":"EGSCI","url":"https://egs.ci/","logo":"https://egs.ci/logo-egsci.png","email":"contact@egs.ci","foundingDate":"2018","address":{"@type":"PostalAddress","addressLocality":"Abidjan","addressCountry":"CI"},"areaServed":["CI","FR"],"identifier":"RCCM CI-ABJ-2018-B-10429"},
+ {"@type":"Organization","@id":"https://egs.ci/#org","name":"EGS Côte d'Ivoire","legalName":"EGSCI SARL","alternateName":"EGSCI","url":"https://egs.ci/","logo":"https://egs.ci/logo-egsci.png","email":"contact@egs.ci","foundingDate":"2018","address":{"@type":"PostalAddress","addressLocality":"Abidjan","addressCountry":"CI"},"areaServed":["CI","FR"],"identifier":"RCCM CI-ABJ-2018-B-10429","makesOffer":[{"@type":"Offer","itemOffered":{"@type":"SoftwareApplication","name":"EvoStudio","applicationCategory":"BusinessApplication"}},{"@type":"Offer","itemOffered":{"@type":"MobileApplication","name":"Ma Vigie","applicationCategory":"LifestyleApplication"}}]},
  {"@type":"WebSite","@id":"https://egs.ci/#website","url":"https://egs.ci/","name":"EGS Côte d'Ivoire","inLanguage":"fr-FR","publisher":{"@id":"https://egs.ci/#org"}}
 ]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --green:#16a34a;--green-dark:#15803d;--green-dim:#dcfce7;--green-soft:#f0fdf4;
-  --ink:#0f172a;--slate:#64748b;--slate-2:#94a3b8;
-  --line:#e2e8f0;
-  --bg:#f6f9f7;--bg2:#ffffff;--bg3:#f8fafc;
-  --night:#0c1410;
+  --green:#16a34a;--green-2:#0ea05a;--green-dark:#15803d;--green-dim:#dcfce7;--green-soft:#f0fdf4;
+  --ci-orange:#f77f00;--ci-orange-dk:#d46a00;--ci-green:#009a44;--ci-red:#e53935;
+  --evo-blue:#2563eb;--evo-blue-dk:#1d4ed8;
+  --ink:#0b1220;--slate:#5b6b62;--slate-2:#94a3b8;
+  --line:#e7eee9;
+  --bg:#f5f8f6;--bg2:#ffffff;--bg3:#f0f5f2;
+  --night:#0a120d;--night-2:#0e1a13;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;height:auto;display:block}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;padding:12px 24px;cursor:pointer;border:none;transition:all .18s;font-family:inherit;white-space:nowrap;border-radius:10px}
+h1,h2,h3,.font-display{font-family:'Sora','Inter',sans-serif}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;padding:13px 26px;cursor:pointer;border:none;transition:all .2s;font-family:inherit;white-space:nowrap;border-radius:12px}
 .btn-primary{background:var(--green);color:#fff}
-.btn-primary:hover{background:var(--green-dark);box-shadow:0 10px 24px rgba(22,163,74,.3);transform:translateY(-1px)}
-.btn-outline{background:transparent;color:var(--ink);border:1px solid #cbd5e1}
-.btn-outline:hover{border-color:var(--green);color:var(--green);background:var(--green-soft)}
+.btn-primary:hover{background:var(--green-dark);box-shadow:0 12px 28px rgba(22,163,74,.32);transform:translateY(-2px)}
 .btn-white{background:#fff;color:var(--ink);font-weight:700}
-.btn-white:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,0,0,.28)}
+.btn-ghost{background:rgba(255,255,255,.07);color:#fff;border:1px solid rgba(255,255,255,.22)}
+.btn-ghost:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.4)}
+.btn-outline{background:transparent;color:var(--ink);border:1px solid #cbd5d0}
+.btn-outline:hover{border-color:var(--green);color:var(--green);background:var(--green-soft)}
 
 /* NAV */
 .nav-wrap{position:sticky;top:14px;z-index:100;padding:0 24px;pointer-events:none}
-.nav{max-width:1040px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;
-  background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border:1px solid #e6eee9;
-  border-radius:16px;padding:10px 16px 10px 18px;gap:16px;pointer-events:all;box-shadow:0 4px 20px rgba(12,20,16,.06)}
-.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;color:var(--ink);flex-shrink:0}
+.nav{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;
+  background:rgba(255,255,255,.82);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);
+  border:1px solid rgba(231,238,233,.9);border-radius:18px;padding:9px 12px 9px 18px;gap:16px;pointer-events:all;box-shadow:0 8px 30px rgba(11,18,13,.07)}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .brand img{height:30px;width:auto}
 .nav-links{display:flex;gap:2px;align-items:center}
-.nav-links a{color:#5b6b62;font-weight:500;font-size:13.5px;padding:8px 14px;border-radius:9px;transition:all .15s}
+.nav-links a{color:#54655c;font-weight:500;font-size:13.5px;padding:9px 14px;border-radius:10px;transition:all .15s}
 .nav-links a:hover{color:var(--ink);background:#eef5f0}
 .nav-cta{display:flex;gap:8px;align-items:center;flex-shrink:0}
-.nav-burger{display:none;background:none;border:none;cursor:pointer;padding:4px;color:var(--ink)}
+.nav-burger{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--ink)}
 .nav-burger svg{display:block;width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
 .drawer{display:none;position:fixed;inset:0;z-index:200}
 .drawer.open{display:block}
 .drawer-bg{position:absolute;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(3px)}
-.drawer-panel{position:absolute;top:0;right:0;bottom:0;width:270px;background:#0c1410;padding:26px 22px;display:flex;flex-direction:column;gap:4px}
-.drawer-panel a{color:rgba(255,255,255,.75);font-size:15px;font-weight:500;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)}
-.drawer-panel .btn{margin-top:16px;justify-content:center}
+.drawer-panel{position:absolute;top:0;right:0;bottom:0;width:280px;background:var(--night);padding:26px 22px;display:flex;flex-direction:column;gap:4px}
+.drawer-panel a{color:rgba(255,255,255,.78);font-size:15px;font-weight:500;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.drawer-panel .btn{margin-top:18px;justify-content:center}
 .drawer-close{align-self:flex-end;background:none;border:none;color:#9aa6a0;cursor:pointer;padding:4px;margin-bottom:6px}
 .drawer-close svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
-@media(max-width:860px){.nav-links{display:none}.nav-cta .btn-outline{display:none}.nav-burger{display:block}}
+@media(max-width:900px){.nav-links{display:none}.nav-cta .btn-outline{display:none}.nav-burger{display:block}}
 
 /* HERO */
-.hero{position:relative;overflow:hidden;padding:120px 0 90px;margin-top:-72px;
-  background:radial-gradient(1100px 540px at 72% -10%,#143d28 0%,transparent 60%),linear-gradient(160deg,#0c1410 55%,#0e2519 100%)}
-.hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:46px 46px;mask-image:radial-gradient(700px 400px at 70% 10%,#000,transparent 75%);pointer-events:none}
+.hero{position:relative;overflow:hidden;padding:138px 0 110px;margin-top:-72px;
+  background:
+   radial-gradient(900px 500px at 80% -5%,rgba(34,197,94,.28),transparent 55%),
+   radial-gradient(700px 500px at 10% 20%,rgba(14,160,90,.16),transparent 55%),
+   linear-gradient(165deg,#0a120d 50%,#0c2117 100%)}
+.hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:52px 52px;mask-image:radial-gradient(800px 460px at 72% 0,#000,transparent 72%);pointer-events:none}
 .hero .wrap{position:relative;z-index:2}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.3);color:#86efac;font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:999px;margin-bottom:24px}
-.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.6);animation:pulse 2s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}70%{box-shadow:0 0 0 8px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
-.hero h1{color:#fff;font-size:54px;line-height:1.07;font-weight:900;letter-spacing:-1.5px;max-width:760px;margin-bottom:22px}
-.hero h1 .hl{background:linear-gradient(120deg,#4ade80,#22c55e);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.hero p.sub{color:#b6c4bc;font-size:18px;max-width:600px;margin-bottom:36px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.32);color:#86efac;font-size:12.5px;font-weight:600;padding:8px 16px;border-radius:999px;margin-bottom:26px;letter-spacing:.2px}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:#22c55e;animation:pulse 2.2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.55)}70%{box-shadow:0 0 0 9px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+.hero h1{color:#fff;font-size:62px;line-height:1.04;font-weight:800;letter-spacing:-2px;max-width:880px;margin-bottom:24px}
+.hero h1 .hl{background:linear-gradient(120deg,#5eead4,#4ade80,#22c55e);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p.sub{color:#aebcb3;font-size:19px;max-width:640px;margin-bottom:40px;line-height:1.6}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-.hero-meta{display:flex;gap:34px;margin-top:52px;flex-wrap:wrap}
-.hero-meta .m b{display:block;color:#fff;font-size:28px;font-weight:800;letter-spacing:-1px}
-.hero-meta .m span{color:#8aa093;font-size:13px}
-@media(max-width:860px){.hero{padding:108px 0 70px}.hero h1{font-size:38px}}
+.hero-meta{display:flex;gap:14px;margin-top:64px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:11px 16px;color:#c8d3cc;font-size:13px;font-weight:500}
+.chip b{color:#fff}
+.chip .ic{font-size:15px}
+@media(max-width:900px){.hero{padding:120px 0 80px}.hero h1{font-size:40px;letter-spacing:-1px}.hero p.sub{font-size:17px}}
+
+/* MARQUEE / stats */
+.stat-band{background:var(--night-2);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.stat-band .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:38px;padding-bottom:38px}
+.stat{text-align:center}
+.stat b{display:block;font-family:'Sora';color:#fff;font-size:34px;font-weight:800;letter-spacing:-1px;line-height:1}
+.stat b .u{color:#4ade80}
+.stat span{color:#8aa093;font-size:13px;margin-top:7px;display:block}
+@media(max-width:680px){.stat-band .wrap{grid-template-columns:1fr 1fr;gap:30px 16px}}
 
 /* SECTION */
-section{padding:84px 0}
-.sec-head{text-align:center;max-width:680px;margin:0 auto 52px}
-.kicker{color:var(--green);font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
-.sec-head h2{font-size:38px;font-weight:850;letter-spacing:-1px;line-height:1.12;margin-bottom:14px}
-.sec-head p{color:var(--slate);font-size:17px}
+section{padding:96px 0}
+.sec-head{max-width:720px;margin:0 auto 60px;text-align:center}
+.kicker{display:inline-block;color:var(--green);font-weight:700;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.sec-head h2{font-size:44px;font-weight:800;letter-spacing:-1.4px;line-height:1.1;margin-bottom:16px}
+.sec-head p{color:var(--slate);font-size:18px}
+@media(max-width:900px){section{padding:70px 0}.sec-head h2{font-size:32px}}
 
-/* PILES / ACTIVITES */
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:var(--bg2);border:1px solid #e8efea;border-radius:18px;padding:30px 26px;transition:all .2s}
-.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(12,40,24,.09);border-color:#c9e6d4}
-.card .ico{width:52px;height:52px;border-radius:14px;background:var(--green-soft);border:1px solid var(--green-dim);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
-.card h3{font-size:19px;font-weight:750;margin-bottom:10px}
-.card p{color:var(--slate);font-size:14.5px}
-@media(max-width:860px){.grid3{grid-template-columns:1fr}}
+/* PRODUITS — featured rows */
+.prod{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:30px}
+.prod.rev .prod-visual{order:2}
+.prod-tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:6px 13px;border-radius:999px;margin-bottom:18px}
+.prod h3{font-size:34px;font-weight:800;letter-spacing:-1px;line-height:1.12;margin-bottom:8px}
+.prod .role{color:var(--slate-2);font-size:14px;font-weight:600;margin-bottom:16px}
+.prod p.desc{color:var(--slate);font-size:16px;margin-bottom:22px}
+.feat{list-style:none;margin-bottom:28px;display:grid;gap:10px}
+.feat li{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;color:#33433b}
+.feat li svg{width:19px;height:19px;flex-shrink:0;margin-top:2px}
+.prod-cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.store-badges{display:flex;gap:10px;flex-wrap:wrap}
+.store{display:inline-flex;align-items:center;gap:9px;background:#0b1220;color:#fff;border-radius:11px;padding:9px 15px;font-size:12px;line-height:1.1}
+.store b{font-size:14px;font-weight:700;display:block}
+.store span{font-size:10px;color:#9fb0c4}
+.store svg{width:20px;height:20px;fill:#fff}
+.soon{font-size:12.5px;color:var(--ci-orange-dk);font-weight:700;background:#fff4e6;border:1px solid #ffe0b8;padding:7px 13px;border-radius:999px}
 
-/* ABOUT split */
-.split{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
-.about-card{background:linear-gradient(160deg,#0c1410,#11271b);border-radius:22px;padding:40px;color:#fff}
+/* EvoStudio visual */
+.evo-frame{background:linear-gradient(160deg,#0d1117,#10203f);border-radius:22px;padding:26px;box-shadow:0 40px 90px rgba(13,17,23,.35);border:1px solid rgba(255,255,255,.08)}
+.evo-frame img{border-radius:12px;border:1px solid rgba(255,255,255,.1)}
+.evo-frame .evlogo{height:26px;margin-bottom:18px;opacity:.96}
+
+/* Ma Vigie phone mockup */
+.phone-stage{display:flex;justify-content:center;position:relative}
+.phone-stage:before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(247,127,0,.22),transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);z-index:0}
+.phone{position:relative;z-index:2;width:268px;height:556px;background:#0b1220;border-radius:42px;padding:11px;box-shadow:0 40px 90px rgba(11,18,13,.4),inset 0 0 0 2px rgba(255,255,255,.06)}
+.phone .screen{width:100%;height:100%;border-radius:32px;overflow:hidden;position:relative;background:#fff8f0;display:flex;flex-direction:column}
+.phone .notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:120px;height:26px;background:#0b1220;border-radius:0 0 16px 16px;z-index:5}
+.mv-top{background:linear-gradient(135deg,var(--ci-orange),var(--ci-orange-dk));color:#fff;padding:38px 18px 16px;flex-shrink:0}
+.mv-top .t{font-family:'Sora';font-weight:800;font-size:16px;display:flex;align-items:center;gap:7px}
+.mv-top .s{font-size:11px;opacity:.92;margin-top:2px}
+.mv-map{flex:1;position:relative;background:
+  linear-gradient(rgba(0,154,68,.06),rgba(0,154,68,.06)),
+  repeating-linear-gradient(0deg,#eef5ef 0 1px,transparent 1px 30px),
+  repeating-linear-gradient(90deg,#eef5ef 0 1px,transparent 1px 30px),#f4f9f5;overflow:hidden}
+.mv-road{position:absolute;background:#e2e8e3}
+.pin{position:absolute;width:26px;height:26px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 4px 10px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center}
+.pin i{transform:rotate(45deg);font-style:normal;font-size:12px}
+.pin.r{background:var(--ci-red)}.pin.o{background:var(--ci-orange)}.pin.y{background:#ffa726}
+.pin.pulse:after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--ci-red);opacity:.5;animation:ping 1.8s infinite}
+@keyframes ping{0%{transform:scale(.7);opacity:.6}100%{transform:scale(1.8);opacity:0}}
+.mv-card{position:absolute;left:12px;right:12px;bottom:64px;background:#fff;border-radius:16px;padding:13px;box-shadow:0 14px 34px rgba(11,18,13,.18);z-index:4}
+.mv-card .hd{display:flex;align-items:center;gap:9px}
+.mv-card .ico{width:34px;height:34px;border-radius:10px;background:#ffe7d1;display:flex;align-items:center;justify-content:center;font-size:17px}
+.mv-card .ti{font-weight:800;font-size:13px;color:#1a1a2e}
+.mv-card .me{font-size:10.5px;color:#9aa6a0}
+.mv-card .bar{height:1px;background:#f0f0f0;margin:10px 0}
+.mv-card .row{display:flex;justify-content:space-between;font-size:10.5px;color:#6b7280}
+.mv-tab{height:54px;background:#fff;border-top:1px solid #f0ece6;display:flex;align-items:center;justify-content:space-around;flex-shrink:0}
+.mv-tab .tb{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:9px;color:#b6bdb8}
+.mv-tab .tb.on{color:var(--ci-orange)}
+.mv-tab .tb .d{width:20px;height:20px;border-radius:7px;background:currentColor;opacity:.85}
+.mv-fab{position:absolute;bottom:74px;left:50%;transform:translateX(-50%);width:54px;height:54px;border-radius:50%;background:var(--ci-red);box-shadow:0 10px 26px rgba(229,57,53,.5);display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;z-index:6;border:4px solid #fff8f0}
+@media(max-width:900px){.prod{grid-template-columns:1fr;gap:34px}.prod.rev .prod-visual{order:0}.prod h3{font-size:28px}}
+
+/* SUR MESURE */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:30px 26px;transition:.2s;position:relative;overflow:hidden}
+.svc:hover{transform:translateY(-5px);box-shadow:0 22px 46px rgba(11,40,24,.1);border-color:#c9e6d4}
+.svc .ic{width:54px;height:54px;border-radius:15px;background:var(--green-soft);border:1px solid var(--green-dim);display:flex;align-items:center;justify-content:center;font-size:25px;margin-bottom:18px}
+.svc h4{font-size:19px;font-weight:750;margin-bottom:10px;font-family:'Sora'}
+.svc p{color:var(--slate);font-size:14.5px}
+@media(max-width:900px){.svc-grid{grid-template-columns:1fr}}
+
+/* TECH strip */
+.tech{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px}
+.tech span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:13.5px;font-weight:600;color:#33433b}
+
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
+.step{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:28px 22px;position:relative}
+.step .n{font-family:'Sora';font-size:13px;font-weight:800;color:var(--green);letter-spacing:1px;margin-bottom:12px}
+.step h4{font-size:17px;font-weight:750;margin-bottom:8px}
+.step p{color:var(--slate);font-size:13.5px}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* ABOUT */
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.about-card{background:linear-gradient(160deg,var(--night),#11271b);border-radius:24px;padding:42px;color:#fff;box-shadow:0 30px 70px rgba(11,18,13,.18)}
 .about-card .row{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:14.5px}
 .about-card .row:last-child{border-bottom:none}
-.about-card .row span{color:#8aa093}
-.about-card .row b{color:#fff;font-weight:600}
+.about-card .row span{color:#8aa093}.about-card .row b{color:#fff;font-weight:600}
 .lead-list{list-style:none;margin-top:22px}
-.lead-list li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;font-size:15px;color:#334155}
+.lead-list li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;font-size:15.5px;color:#33433b}
 .lead-list li:before{content:"✓";color:var(--green);font-weight:800;flex-shrink:0}
-@media(max-width:860px){.split{grid-template-columns:1fr;gap:34px}}
+@media(max-width:900px){.split{grid-template-columns:1fr;gap:36px}}
 
-/* BRAND EVOSTUDIO */
-.brand-showcase{background:linear-gradient(165deg,#0c1410 60%,#0e2519);border-radius:26px;padding:54px 48px;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center;overflow:hidden;position:relative}
-.brand-showcase img.shot{border-radius:14px;border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 70px rgba(0,0,0,.5)}
-.brand-showcase .evologo{height:34px;margin-bottom:20px}
-.brand-showcase h3{font-size:30px;font-weight:850;letter-spacing:-.8px;margin-bottom:14px}
-.brand-showcase p{color:#b6c4bc;font-size:15.5px;margin-bottom:26px}
-.brand-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
-.brand-tags span{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);color:#d6e0da;font-size:12.5px;font-weight:500;padding:6px 13px;border-radius:999px}
-@media(max-width:860px){.brand-showcase{grid-template-columns:1fr;padding:38px 26px}}
-
-/* VALUES */
-.vals{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.val{padding:26px 22px;border-radius:16px;background:var(--bg2);border:1px solid #e8efea}
-.val .n{font-size:30px;font-weight:900;color:var(--green-dim);line-height:1;margin-bottom:14px}
-.val h4{font-size:16px;font-weight:750;margin-bottom:8px}
-.val p{color:var(--slate);font-size:13.5px}
-@media(max-width:860px){.vals{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.vals{grid-template-columns:1fr}}
-
-/* CONTACT CTA */
-.cta-band{background:linear-gradient(120deg,var(--green),#0ea05a);border-radius:26px;padding:56px 48px;text-align:center;color:#fff;position:relative;overflow:hidden}
-.cta-band:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:40px 40px;mask-image:radial-gradient(500px 300px at 50% 0,#000,transparent 70%)}
+/* CTA */
+.cta-band{background:linear-gradient(120deg,var(--green),var(--green-2));border-radius:28px;padding:64px 48px;text-align:center;color:#fff;position:relative;overflow:hidden}
+.cta-band:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:42px 42px;mask-image:radial-gradient(560px 320px at 50% 0,#000,transparent 70%)}
 .cta-band > *{position:relative;z-index:2}
-.cta-band h2{font-size:34px;font-weight:850;letter-spacing:-.8px;margin-bottom:12px}
-.cta-band p{color:rgba(255,255,255,.9);font-size:17px;margin-bottom:28px;max-width:520px;margin-left:auto;margin-right:auto}
+.cta-band h2{font-size:40px;font-weight:800;letter-spacing:-1.2px;margin-bottom:14px}
+.cta-band p{color:rgba(255,255,255,.92);font-size:18px;margin-bottom:30px;max-width:540px;margin-left:auto;margin-right:auto}
+@media(max-width:900px){.cta-band{padding:46px 26px}.cta-band h2{font-size:30px}}
 
 /* FOOTER */
-footer{background:#0c1410;color:#9aa6a0;padding:56px 0 30px;font-size:14px}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:38px}
-.foot-grid img{height:30px;margin-bottom:14px;filter:brightness(0) invert(1) opacity(.92)}
+footer{background:var(--night);color:#9aa6a0;padding:62px 0 30px;font-size:14px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:42px}
+.foot-grid .lg{height:30px;margin-bottom:16px;filter:brightness(0) invert(1) opacity(.92)}
 .foot-grid p{color:#7d8a82;font-size:13.5px;max-width:280px}
-.foot-col h5{color:#fff;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px}
+.foot-col h5{color:#fff;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px}
 .foot-col a{display:block;color:#9aa6a0;padding:6px 0;font-size:14px;transition:.15s}
 .foot-col a:hover{color:#4ade80}
 .foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:#6b766f}
-@media(max-width:860px){.foot-grid{grid-template-columns:1fr;gap:28px}}
+@media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;gap:30px}}
 </style>
 </head>
 <body>
@@ -165,15 +235,15 @@ footer{background:#0c1410;color:#9aa6a0;padding:56px 0 30px;font-size:14px}
   <nav class="nav">
     <a href="/" class="brand"><img src="/logo-egsci.png" alt="EGS Côte d'Ivoire" /></a>
     <div class="nav-links">
-      <a href="#activites">Nos activités</a>
+      <a href="#produits">Nos produits</a>
+      <a href="#surmesure">Sur mesure</a>
+      <a href="#expertise">Expertise</a>
       <a href="#apropos">À propos</a>
-      <a href="#evostudio">EvoStudio</a>
-      <a href="#valeurs">Valeurs</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-cta">
-      <a href="https://evostudio.fr" target="_blank" rel="noopener" class="btn btn-outline">EvoStudio ↗</a>
-      <a href="#contact" class="btn btn-primary">Nous contacter</a>
+      <a href="#produits" class="btn btn-outline">Voir nos produits</a>
+      <a href="#contact" class="btn btn-primary">Démarrer un projet</a>
       <button class="nav-burger" onclick="document.getElementById('drawer').classList.add('open')" aria-label="Menu">
         <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -181,82 +251,233 @@ footer{background:#0c1410;color:#9aa6a0;padding:56px 0 30px;font-size:14px}
   </nav>
 </div>
 
-<!-- DRAWER MOBILE -->
 <div class="drawer" id="drawer">
   <div class="drawer-bg" onclick="document.getElementById('drawer').classList.remove('open')"></div>
   <div class="drawer-panel">
     <button class="drawer-close" onclick="document.getElementById('drawer').classList.remove('open')" aria-label="Fermer">
       <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
     </button>
-    <a href="#activites" onclick="document.getElementById('drawer').classList.remove('open')">Nos activités</a>
+    <a href="#produits" onclick="document.getElementById('drawer').classList.remove('open')">Nos produits</a>
+    <a href="#surmesure" onclick="document.getElementById('drawer').classList.remove('open')">Sur mesure</a>
+    <a href="#expertise" onclick="document.getElementById('drawer').classList.remove('open')">Expertise</a>
     <a href="#apropos" onclick="document.getElementById('drawer').classList.remove('open')">À propos</a>
-    <a href="#evostudio" onclick="document.getElementById('drawer').classList.remove('open')">EvoStudio</a>
-    <a href="#valeurs" onclick="document.getElementById('drawer').classList.remove('open')">Valeurs</a>
     <a href="#contact" onclick="document.getElementById('drawer').classList.remove('open')">Contact</a>
-    <a href="https://evostudio.fr" target="_blank" rel="noopener" class="btn btn-primary">Découvrir EvoStudio</a>
+    <a href="#contact" onclick="document.getElementById('drawer').classList.remove('open')" class="btn btn-primary">Démarrer un projet</a>
   </div>
 </div>
 
 <!-- HERO -->
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow"><span class="dot"></span> Société technologique · Abidjan, Côte d'Ivoire</span>
-    <h1>Nous concevons des <span class="hl">logiciels & solutions numériques</span> pour les professionnels.</h1>
-    <p class="sub">EGS Côte d'Ivoire (EGSCI) est une entreprise d'édition logicielle et de services numériques. Nous transformons des idées en produits fiables, performants et respectueux de vos données — dont la suite professionnelle <strong style="color:#d6e0da">EvoStudio</strong>.</p>
+    <span class="eyebrow"><span class="dot"></span> Studio technologique · Abidjan, Côte d'Ivoire 🇨🇮</span>
+    <h1>Nous concevons des <span class="hl">produits numériques</span> qui comptent.</h1>
+    <p class="sub">EGS Côte d'Ivoire (EGSCI) est un studio d'édition logicielle et de développement sur mesure. Nous créons nos propres produits — <strong style="color:#dbe6df">EvoStudio</strong> et <strong style="color:#dbe6df">Ma Vigie</strong> — et donnons vie aux projets de nos clients.</p>
     <div class="hero-cta">
-      <a href="#activites" class="btn btn-white">Découvrir nos activités</a>
-      <a href="#contact" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.25)">Travailler avec nous</a>
+      <a href="#produits" class="btn btn-white">Découvrir nos produits</a>
+      <a href="#contact" class="btn btn-ghost">Démarrer un projet →</a>
     </div>
     <div class="hero-meta">
-      <div class="m"><b>2018</b><span>Année de création</span></div>
-      <div class="m"><b>100%</b><span>Local & confidentiel</span></div>
-      <div class="m"><b>3+</b><span>Produits édités</span></div>
-      <div class="m"><b>CI · FR</b><span>Zones desservies</span></div>
+      <span class="chip"><span class="ic">📧</span> <b>EvoStudio</b>&nbsp;— Emailing pro</span>
+      <span class="chip"><span class="ic">🛡️</span> <b>Ma Vigie</b>&nbsp;— Sécurité citoyenne</span>
+      <span class="chip"><span class="ic">⚙️</span> <b>Sur mesure</b>&nbsp;— Web & mobile</span>
     </div>
   </div>
 </header>
 
-<!-- ACTIVITES -->
-<section id="activites">
+<!-- STATS -->
+<div class="stat-band">
+  <div class="wrap">
+    <div class="stat"><b>2018</b><span>Studio fondé à Abidjan</span></div>
+    <div class="stat"><b>2<span class="u">+</span></b><span>Produits édités</span></div>
+    <div class="stat"><b>100<span class="u">%</span></b><span>Conçu en Côte d'Ivoire</span></div>
+    <div class="stat"><b>Web<span class="u">·</span>Mobile</b><span>Domaines couverts</span></div>
+  </div>
+</div>
+
+<!-- PRODUITS -->
+<section id="produits">
   <div class="wrap">
     <div class="sec-head">
-      <div class="kicker">Nos activités</div>
-      <h2>Trois pôles, une même exigence</h2>
-      <p>Du logiciel propriétaire au service sur mesure, nous accompagnons les entreprises dans leur transformation numérique.</p>
+      <div class="kicker">Nos produits</div>
+      <h2>Des logiciels que nous concevons et publions</h2>
+      <p>Chaque produit EGSCI naît d'un besoin réel et grandit avec ses utilisateurs.</p>
     </div>
-    <div class="grid3">
-      <div class="card">
-        <div class="ico">🧩</div>
-        <h3>Édition logicielle</h3>
-        <p>Nous concevons et publions nos propres logiciels professionnels, comme la suite <strong>EvoStudio</strong> dédiée à l'emailing. Des produits maintenus, mis à jour et pensés pour durer.</p>
+
+    <!-- EvoStudio -->
+    <div class="prod">
+      <div>
+        <span class="prod-tag" style="background:#eff6ff;color:var(--evo-blue);border:1px solid #dbeafe">● Produit phare · En ligne</span>
+        <h3>EvoStudio</h3>
+        <div class="role">Suite professionnelle d'emailing</div>
+        <p class="desc">Trois outils complémentaires pour réussir vos campagnes : extraire, vérifier et envoyer vos emails en masse — 100% en local, avec une infrastructure SMTP dédiée à haute délivrabilité.</p>
+        <ul class="feat">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> <b>EvoExtractor</b>&nbsp;— collecte d'adresses ciblées</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> <b>EvoVérificateur</b>&nbsp;— nettoyage syntaxe, MX & SMTP</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> <b>EvoSender</b>&nbsp;— envoi en masse haute délivrabilité</li>
+        </ul>
+        <div class="prod-cta">
+          <a href="https://evostudio.fr" target="_blank" rel="noopener" class="btn btn-primary" style="background:var(--evo-blue)">Visiter evostudio.fr ↗</a>
+        </div>
       </div>
-      <div class="card">
-        <div class="ico">⚙️</div>
-        <h3>Solutions numériques</h3>
-        <p>Applications métier, automatisations, plateformes web et outils internes : nous développons des solutions sur mesure adaptées aux besoins réels de nos clients.</p>
+      <div class="prod-visual">
+        <div class="evo-frame">
+          <img src="/logoevostudio2.png" alt="EvoStudio" class="evlogo" />
+          <img src="/Hub.png" alt="Aperçu de la suite EvoStudio" />
+        </div>
       </div>
-      <div class="card">
-        <div class="ico">🛡️</div>
-        <h3>Conseil & accompagnement</h3>
-        <p>Stratégie digitale, délivrabilité email, sécurité des données et bonnes pratiques : nous mettons notre expertise au service de votre croissance.</p>
+    </div>
+
+    <hr style="border:none;border-top:1px solid var(--line);margin:64px 0" />
+
+    <!-- Ma Vigie -->
+    <div class="prod rev">
+      <div class="prod-visual">
+        <div class="phone-stage">
+          <div class="phone">
+            <div class="notch"></div>
+            <div class="screen">
+              <div class="mv-top">
+                <div class="t">🛡️ Ma Vigie <span style="font-size:12px">🇨🇮</span></div>
+                <div class="s">Réseau citoyen de vigilance</div>
+              </div>
+              <div class="mv-map">
+                <div class="mv-road" style="top:80px;left:-10px;right:-10px;height:14px;transform:rotate(-8deg)"></div>
+                <div class="mv-road" style="top:180px;left:60px;width:14px;height:240px"></div>
+                <div class="mv-road" style="top:260px;left:-10px;right:40px;height:12px;transform:rotate(5deg)"></div>
+                <div class="pin r pulse" style="top:120px;left:120px"><i>🔥</i></div>
+                <div class="pin o" style="top:210px;left:54px"><i>⚠️</i></div>
+                <div class="pin y" style="top:300px;left:150px"><i>🚗</i></div>
+                <div class="mv-card">
+                  <div class="hd">
+                    <div class="ico">🔥</div>
+                    <div>
+                      <div class="ti">Incendie signalé</div>
+                      <div class="me">Cocody · il y a 2 min · 320 m</div>
+                    </div>
+                  </div>
+                  <div class="bar"></div>
+                  <div class="row"><span>⚠️ 12 signalements proches</span><span style="color:var(--ci-red);font-weight:700">URGENT</span></div>
+                </div>
+                <div class="mv-fab">＋</div>
+              </div>
+              <div class="mv-tab">
+                <div class="tb on"><div class="d"></div>Carte</div>
+                <div class="tb"><div class="d"></div>Alertes</div>
+                <div class="tb"><div class="d"></div>Signaler</div>
+                <div class="tb"><div class="d"></div>Profil</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span class="prod-tag" style="background:#fff4e6;color:var(--ci-orange-dk);border:1px solid #ffe0b8">● Application mobile · Bientôt sur les stores</span>
+        <h3>Ma Vigie</h3>
+        <div class="role">Réseau citoyen de vigilance — Côte d'Ivoire</div>
+        <p class="desc">Une application mobile qui permet à chaque habitant de signaler en temps réel les situations dangereuses — cambriolages, agressions, incendies, accidents — et d'alerter sa communauté autour de lui, sur une carte vivante.</p>
+        <ul class="feat">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#f77f00" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Signalement géolocalisé avec photo, en quelques secondes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#f77f00" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Carte des alertes en temps réel & notifications de proximité</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#f77f00" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Accès direct aux numéros d'urgence officiels (180, 110, 185…)</li>
+        </ul>
+        <div class="prod-cta">
+          <div class="store-badges">
+            <span class="store"><svg viewBox="0 0 24 24"><path d="M3 3v18l15-9L3 3z"/></svg><span>Bientôt sur<b>Google Play</b></span></span>
+            <span class="store"><svg viewBox="0 0 24 24"><path d="M16.5 1c-1.3.1-2.8.9-3.7 2-0.8.9-1.5 2.3-1.2 3.6 1.4.1 2.8-.7 3.6-1.8.8-1 1.4-2.4 1.3-3.8zM21 17.3c-.5 1.2-.8 1.7-1.5 2.8-1 1.5-2.4 3.4-4.1 3.4-1.5 0-1.9-1-4-1-2 0-2.5 1-4 1-1.7 0-3-1.7-4-3.2C-1 16-1.4 9.6 1.9 6.6c1-1 2.4-1.6 3.7-1.6 1.5 0 2.5 1 3.8 1 1.2 0 1.9-1 3.8-1 1.1 0 2.3.6 3.2 1.6-2.8 1.5-2.3 5.5.6 6.7z"/></svg><span>Bientôt sur<b>App Store</b></span></span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- SUR MESURE -->
+<section id="surmesure" style="background:var(--bg3)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Conception sur mesure</div>
+      <h2>Votre projet, notre savoir-faire</h2>
+      <p>Au-delà de nos produits, nous mettons notre expertise au service des entreprises et organisations qui veulent un outil numérique à leur image.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc">
+        <div class="ic">📱</div>
+        <h4>Applications mobiles</h4>
+        <p>Apps Android & iOS performantes (Flutter), de l'idée au déploiement sur les stores. Géolocalisation, temps réel, notifications, paiement.</p>
+      </div>
+      <div class="svc">
+        <div class="ic">🌐</div>
+        <h4>Plateformes & sites web</h4>
+        <p>Sites vitrines, plateformes métier, espaces clients, tableaux de bord. Rapides, sécurisés et pensés pour convertir.</p>
+      </div>
+      <div class="svc">
+        <div class="ic">⚙️</div>
+        <h4>Logiciels & automatisations</h4>
+        <p>Outils internes, API, intégrations et automatisations qui font gagner du temps à vos équipes au quotidien.</p>
+      </div>
+      <div class="svc">
+        <div class="ic">📨</div>
+        <h4>Infrastructure email</h4>
+        <p>Serveurs SMTP dédiés à haute délivrabilité, configuration SPF/DKIM/DMARC et accompagnement délivrabilité.</p>
+      </div>
+      <div class="svc">
+        <div class="ic">🛡️</div>
+        <h4>Sécurité & données</h4>
+        <p>Architecture respectueuse de la vie privée, traitement local quand c'est possible, sauvegardes et bonnes pratiques.</p>
+      </div>
+      <div class="svc">
+        <div class="ic">💡</div>
+        <h4>Conseil & accompagnement</h4>
+        <p>Cadrage, choix techniques, stratégie digitale et maintenance. Un partenaire qui reste là après la livraison.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Notre stack</div>
+      <h2>Des technologies modernes & éprouvées</h2>
+      <p>Nous choisissons des outils fiables, performants et durables pour bâtir des produits qui tiennent dans le temps.</p>
+    </div>
+    <div class="tech">
+      <span>Flutter</span><span>Dart</span><span>Firebase</span><span>Node.js</span><span>Electron</span>
+      <span>SQLite</span><span>OpenStreetMap</span><span>SendGrid</span><span>JavaScript</span><span>REST API</span><span>Android &amp; iOS</span><span>Windows &amp; macOS</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section style="background:var(--bg3)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Notre méthode</div>
+      <h2>Comment nous travaillons</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">01 — ÉCOUTE</div><h4>Cadrage</h4><p>On comprend votre besoin, vos utilisateurs et vos objectifs avant d'écrire la moindre ligne.</p></div>
+      <div class="step"><div class="n">02 — DESIGN</div><h4>Conception</h4><p>Maquettes, parcours et architecture technique validés avec vous, étape par étape.</p></div>
+      <div class="step"><div class="n">03 — BUILD</div><h4>Développement</h4><p>Développement itératif avec des points réguliers et des versions testables.</p></div>
+      <div class="step"><div class="n">04 — LIVRAISON</div><h4>Mise en ligne & suivi</h4><p>Déploiement, formation et maintenance. On reste votre partenaire dans la durée.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- A PROPOS -->
-<section id="apropos" style="background:var(--bg3)">
+<section id="apropos">
   <div class="wrap">
     <div class="split">
       <div>
         <div class="kicker">À propos d'EGSCI</div>
-        <h2 style="font-size:36px;font-weight:850;letter-spacing:-1px;line-height:1.12;margin-bottom:18px">Une entreprise ivoirienne au service du numérique professionnel</h2>
-        <p style="color:var(--slate);font-size:16px">Fondée en 2018 à Abidjan, <strong>EGS Côte d'Ivoire (EGSCI SARL)</strong> est une société technologique spécialisée dans l'édition de logiciels et la fourniture de solutions numériques. Notre conviction : la technologie doit être accessible, fiable et respectueuse de la confidentialité.</p>
+        <h2 style="font-size:40px;font-weight:800;letter-spacing:-1.4px;line-height:1.1;margin-bottom:18px">Un studio ivoirien au service du numérique professionnel</h2>
+        <p style="color:var(--slate);font-size:16.5px">Fondée en 2018 à Abidjan, <strong>EGS Côte d'Ivoire (EGSCI SARL)</strong> est une société technologique spécialisée dans l'édition de logiciels et le développement sur mesure. Notre conviction : la technologie doit être <strong>accessible, fiable et respectueuse de la vie privée</strong>.</p>
         <ul class="lead-list">
-          <li>Édition de produits logiciels professionnels, maintenus dans la durée.</li>
-          <li>Philosophie « 100% local » : vos données restent sur vos machines.</li>
-          <li>Une équipe réactive, un support disponible et un savoir-faire éprouvé.</li>
-          <li>Des solutions pensées pour les professionnels, agences et indépendants.</li>
+          <li>Nous éditons nos propres produits, maintenus et améliorés en continu.</li>
+          <li>Nous accompagnons les entreprises et organisations de A à Z.</li>
+          <li>Une équipe locale, réactive et à l'écoute, basée en Côte d'Ivoire.</li>
+          <li>Une exigence constante : la confidentialité et la qualité.</li>
         </ul>
       </div>
       <div class="about-card">
@@ -266,46 +487,9 @@ footer{background:#0c1410;color:#9aa6a0;padding:56px 0 30px;font-size:14px}
         <div class="row"><span>Siège</span><b>Abidjan, Côte d'Ivoire</b></div>
         <div class="row"><span>RCCM</span><b>CI-ABJ-2018-B-10429</b></div>
         <div class="row"><span>Création</span><b>2018</b></div>
-        <div class="row"><span>Produit phare</span><b>EvoStudio</b></div>
+        <div class="row"><span>Produits</span><b>EvoStudio · Ma Vigie</b></div>
         <div class="row"><span>Contact</span><b>contact@egs.ci</b></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- EVOSTUDIO -->
-<section id="evostudio">
-  <div class="wrap">
-    <div class="brand-showcase">
-      <div>
-        <img src="/logoevostudio2.png" alt="EvoStudio" class="evologo" />
-        <h3>Notre produit phare : la suite EvoStudio</h3>
-        <p>EvoStudio réunit trois outils professionnels d'emailing — extraction, vérification et envoi en masse — dans une suite 100% locale, performante et sécurisée. C'est la vitrine de notre savoir-faire en édition logicielle.</p>
-        <div class="brand-tags">
-          <span>EvoExtractor</span><span>EvoVérificateur</span><span>EvoSender</span><span>SMTP dédié</span><span>Licence annuelle</span>
-        </div>
-        <a href="https://evostudio.fr" target="_blank" rel="noopener" class="btn btn-white">Visiter evostudio.fr ↗</a>
-      </div>
-      <div>
-        <img src="/Hub.png" alt="Aperçu de la suite EvoStudio" class="shot" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VALEURS -->
-<section id="valeurs" style="background:var(--bg3)">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="kicker">Ce qui nous guide</div>
-      <h2>Nos valeurs</h2>
-      <p>Les principes qui orientent chacun de nos produits et chacune de nos décisions.</p>
-    </div>
-    <div class="vals">
-      <div class="val"><div class="n">01</div><h4>Fiabilité</h4><p>Des produits stables, testés et maintenus dans le temps. La confiance se construit dans la durée.</p></div>
-      <div class="val"><div class="n">02</div><h4>Confidentialité</h4><p>Vos données vous appartiennent. Nos solutions privilégient le traitement local et la sécurité.</p></div>
-      <div class="val"><div class="n">03</div><h4>Proximité</h4><p>Un support réactif et humain, à l'écoute des besoins réels de nos utilisateurs.</p></div>
-      <div class="val"><div class="n">04</div><h4>Innovation</h4><p>Nous faisons évoluer nos produits en continu pour rester à la pointe des usages.</p></div>
     </div>
   </div>
 </section>
@@ -314,11 +498,11 @@ footer{background:#0c1410;color:#9aa6a0;padding:56px 0 30px;font-size:14px}
 <section id="contact">
   <div class="wrap">
     <div class="cta-band">
-      <h2>Un projet, une question, un partenariat ?</h2>
-      <p>Parlons-en. Notre équipe vous répond rapidement et vous accompagne dans vos projets numériques.</p>
+      <h2>Construisons votre prochain produit</h2>
+      <p>Un produit à éditer, une app à développer, une question ? Parlons-en — notre équipe vous répond rapidement.</p>
       <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
         <a href="mailto:contact@egs.ci" class="btn btn-white">✉️ contact@egs.ci</a>
-        <a href="https://evostudio.fr" target="_blank" rel="noopener" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.4)">Découvrir EvoStudio</a>
+        <a href="https://evostudio.fr" target="_blank" rel="noopener" class="btn btn-ghost">Découvrir EvoStudio ↗</a>
       </div>
     </div>
   </div>
@@ -329,27 +513,31 @@ footer{background:#0c1410;color:#9aa6a0;padding:56px 0 30px;font-size:14px}
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <img src="/logo-egsci.png" alt="EGS Côte d'Ivoire" />
-        <p>EGS Côte d'Ivoire (EGSCI SARL) — éditeur de logiciels et fournisseur de solutions numériques basé à Abidjan. Créateur de la suite EvoStudio.</p>
-      </div>
-      <div class="foot-col">
-        <h5>Société</h5>
-        <a href="#activites">Nos activités</a>
-        <a href="#apropos">À propos</a>
-        <a href="#valeurs">Nos valeurs</a>
-        <a href="#contact">Contact</a>
+        <img src="/logo-egsci.png" alt="EGS Côte d'Ivoire" class="lg" />
+        <p>EGS Côte d'Ivoire (EGSCI SARL) — studio d'édition logicielle et de développement sur mesure, basé à Abidjan. Créateur d'EvoStudio et de Ma Vigie.</p>
       </div>
       <div class="foot-col">
         <h5>Produits</h5>
         <a href="https://evostudio.fr" target="_blank" rel="noopener">EvoStudio ↗</a>
-        <a href="https://evostudio.fr/produit.html?id=sender" target="_blank" rel="noopener">EvoSender</a>
-        <a href="https://evostudio.fr/produit.html?id=extractor" target="_blank" rel="noopener">EvoExtractor</a>
-        <a href="https://evostudio.fr/produit.html?id=verifier" target="_blank" rel="noopener">EvoVérificateur</a>
+        <a href="#produits">Ma Vigie</a>
+        <a href="#surmesure">Sur mesure</a>
+      </div>
+      <div class="foot-col">
+        <h5>Société</h5>
+        <a href="#apropos">À propos</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="mailto:contact@egs.ci">contact@egs.ci</a>
+        <a href="mailto:Mavigi@egs.ci">Mavigi@egs.ci</a>
+        <span style="color:#7d8a82;font-size:13.5px">Abidjan, Côte d'Ivoire</span>
       </div>
     </div>
     <div class="foot-bottom">
       <span>© 2018–2026 EGSCI SARL — EGS Côte d'Ivoire. Tous droits réservés.</span>
-      <span>RCCM CI-ABJ-2018-B-10429 · Abidjan, Côte d'Ivoire</span>
+      <span>RCCM CI-ABJ-2018-B-10429 · Abidjan, Côte d'Ivoire 🇨🇮</span>
     </div>
   </div>
 </footer>
