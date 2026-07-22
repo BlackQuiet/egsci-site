@@ -260,6 +260,17 @@ section{padding:96px 0}
 .cip-pay .pill{display:flex;align-items:center;gap:7px;background:#fff;border:1px solid #ece8f6;border-radius:8px;padding:6px 8px;margin-bottom:5px;font-size:9.5px;color:#2a1a4a;font-weight:600}
 .cip-pay .pill .d{width:17px;height:17px;border-radius:5px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px;font-weight:800;flex-shrink:0}
 .cip-pay .ok{margin-top:auto;text-align:center;font-size:9.5px;font-weight:800;color:#16a34a}
+/* mini hub EvoStudio (remplace l'ancien Hub.png) */
+.evo-hub{width:88%;margin-top:20px;border-radius:9px 9px 0 0;overflow:hidden;border:1px solid rgba(255,255,255,.14);box-shadow:0 -4px 26px rgba(0,0,0,.45);background:#eef3f9}
+.evo-hub .eh-bar{display:flex;align-items:center;gap:7px;padding:8px 11px;background:#fff;border-bottom:1px solid #e6edf5}
+.evo-hub .eh-logo{width:17px;height:17px;border-radius:5px;background:linear-gradient(135deg,#2563eb,#12233f);color:#fff;display:flex;align-items:center;justify-content:center;font-size:9px}
+.evo-hub .eh-ti{font-size:9.5px;font-weight:900;color:#12233f;letter-spacing:.5px}
+.evo-hub .eh-sub{font-size:7.5px;color:#8a97a8;font-weight:600;margin-left:auto}
+.evo-hub .eh-grid{display:flex;gap:6px;padding:10px}
+.evo-hub .eh-t{flex:1;background:#fff;border:1px solid #e6edf5;border-radius:8px;padding:9px 4px 8px;display:flex;flex-direction:column;align-items:center;gap:5px}
+.evo-hub .eh-t .i{width:24px;height:24px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff}
+.evo-hub .eh-t b{font-size:7px;color:#0b1220;line-height:1}
+.evo-hub .eh-t .op{font-size:6.5px;color:#fff;font-weight:700;padding:2px 9px;border-radius:99px}
 @media(max-width:900px){.prodgrid{grid-template-columns:1fr}}
 
 /* SUR MESURE */
@@ -411,7 +422,16 @@ footer{background:var(--night);color:#9aa6a0;padding:62px 0 30px;font-size:14px}
     <div class="prodgrid">
       <!-- EvoStudio -->
       <div class="pg-card app">
-        <div class="pg-head evo"><img src="/Hub.png" alt="Aperçu EvoStudio" class="shot" loading="lazy" /></div>
+        <div class="pg-head evo">
+          <div class="evo-hub" role="img" aria-label="Aperçu du hub EvoStudio : EvoExtractor, EvoSender, EvoVérificateur">
+            <div class="eh-bar"><span class="eh-logo">◉</span><span class="eh-ti">EVOSTUDIO</span><span class="eh-sub">Suite Email Pro</span></div>
+            <div class="eh-grid">
+              <div class="eh-t"><div class="i" style="background:#16a34a">🔍</div><b>EvoExtractor</b><span class="op" style="background:#16a34a">Ouvrir</span></div>
+              <div class="eh-t"><div class="i" style="background:#2563eb">✈️</div><b>EvoSender</b><span class="op" style="background:#2563eb">Ouvrir</span></div>
+              <div class="eh-t"><div class="i" style="background:#7c3aed">✓</div><b>EvoVérif.</b><span class="op" style="background:#7c3aed">Ouvrir</span></div>
+            </div>
+          </div>
+        </div>
         <div class="pg-body">
           <span class="pg-tag" style="background:#dcfce7;color:#15803d">● En ligne</span>
           <h3>EvoStudio</h3>
