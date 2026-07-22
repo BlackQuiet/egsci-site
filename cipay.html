@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cipay — Passerelle de paiement Mobile Money, carte & crypto pour l'Afrique | EGSCI</title>
+<meta name="description" content="Cipay, la passerelle de paiement d'EGSCI : encaissez via Wave, Orange Money, MTN, Moov, Djamo, carte bancaire et crypto avec une seule intégration. API unique, webhooks signés, réconciliation en partie double." />
+<meta name="keywords" content="Cipay, agrégateur de paiement, passerelle paiement Afrique, Mobile Money, Wave, Orange Money, API paiement, crypto USDT, XOF, EGSCI" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#7c3aed" />
+<link rel="canonical" href="https://egs.ci/cipay.html" />
+<link rel="icon" href="/favicon.png" type="image/png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Cipay — Passerelle de paiement pour l'Afrique" />
+<meta property="og:description" content="Mobile Money, carte bancaire et crypto avec une seule intégration API." />
+<meta property="og:url" content="https://egs.ci/cipay.html" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BreadcrumbList","itemListElement":[
+   {"@type":"ListItem","position":1,"name":"Accueil","item":"https://egs.ci/"},
+   {"@type":"ListItem","position":2,"name":"Cipay","item":"https://egs.ci/cipay.html"}]},
+ {"@type":"WebApplication","name":"Cipay","operatingSystem":"Web, API REST","applicationCategory":"FinanceApplication","url":"https://egs.ci/cipay.html","inLanguage":"fr-FR","description":"Passerelle et agrégateur de paiement pour l'Afrique de l'Ouest : Mobile Money (Wave, Orange Money, MTN, Moov, Djamo), carte bancaire et crypto via une seule intégration API, avec webhooks signés et grand livre en partie double.","offers":{"@type":"Offer","price":"0","priceCurrency":"XOF"},"publisher":{"@type":"Organization","name":"EGSCI SARL","url":"https://egs.ci/"}}
+]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/page.css" />
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav class="nav">
+    <a href="/" class="brand"><img src="/logo-egsci.png" alt="EGS Côte d'Ivoire" /></a>
+    <div class="nav-links">
+      <a href="/evostudio.html">EvoStudio</a>
+      <a href="/ma-vigi.html">Ma Vigi</a>
+      <a href="/cipay.html" class="active">Cipay</a>
+      <a href="/sur-mesure.html">Sur mesure</a>
+      <a href="/a-propos.html">À propos</a>
+    </div>
+    <div class="nav-cta"><a href="mailto:contact@egs.ci?subject=Cipay%20%E2%80%94%20Devenir%20partenaire" class="btn btn-primary" style="background:#7c3aed">Nous contacter ↗</a></div>
+  </nav>
+</div>
+
+<header class="phero violet">
+  <div class="wrap">
+    <div class="crumb"><a href="/">Accueil</a> › Cipay</div>
+    <span class="tag">💳 Passerelle de paiement · Bientôt 🇨🇮</span>
+    <h1>Cipay — encaissez partout en Afrique, avec une seule intégration</h1>
+    <p class="lead">La passerelle de paiement d'EGSCI qui réunit Mobile Money, carte bancaire et crypto derrière une API unique. Une intégration, tous les moyens de paiement, une réconciliation fiable.</p>
+    <div class="cta">
+      <a href="mailto:contact@egs.ci?subject=Cipay%20%E2%80%94%20Devenir%20partenaire" class="btn btn-light">Devenir partenaire</a>
+      <a href="/sur-mesure.html" class="btn btn-ghost">Nos services →</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* Variante d'accent VIOLET / INDIGO (locale à cette page) */
+  .phero.violet{background:radial-gradient(800px 460px at 78% -10%,rgba(124,58,237,.28),transparent 58%),linear-gradient(165deg,#0c0a1e 55%,#1a0f3a 100%)}
+  .phero.violet .tag{background:rgba(124,58,237,.16);border-color:rgba(124,58,237,.38);color:#c4b5fd}
+  .cta-box.violet{background:linear-gradient(120deg,#7c3aed,#6d28d9)}
+
+  /* DÉMO — téléphone de paiement Cipay */
+  #cpDemo .chead{background:linear-gradient(135deg,#7c3aed,#6d28d9);color:#fff;padding:38px 16px 16px;flex-shrink:0;font-family:'Sora'}
+  #cpDemo .chead b{font-size:15px;font-weight:800;display:block}
+  #cpDemo .chead span{display:block;font-size:11px;opacity:.9;margin-top:2px}
+  #cpDemo .cbody{flex:1;overflow:auto;padding:16px 14px;background:#faf9ff}
+  #cpDemo .amt{text-align:center;margin-bottom:16px}
+  #cpDemo .amt .big{font-family:'Sora';font-size:30px;font-weight:800;color:#2a1a4a;letter-spacing:-1px}
+  #cpDemo .amt small{font-size:11px;color:#9aa0aa;display:block}
+  #cpDemo .fld{background:#fff;border:1px solid #ece8f6;border-radius:12px;padding:11px 13px;margin-bottom:10px}
+  #cpDemo .fld label{font-size:10px;color:#9aa0aa;font-weight:600;text-transform:uppercase;letter-spacing:.4px}
+  #cpDemo .fld .v{font-size:14px;font-weight:600;color:#2a1a4a;margin-top:2px}
+  #cpDemo .brand-row{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  #cpDemo .blogo{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;color:#fff;font-weight:800;flex-shrink:0}
+  #cpDemo .brand-row b{font-size:14px;display:block}
+  #cpDemo .brand-row small{font-size:11px;color:#9aa0aa}
+  #cpDemo .paybtn{width:100%;padding:14px;border:none;border-radius:14px;background:linear-gradient(135deg,#7c3aed,#6d28d9);color:#fff;font-weight:800;font-size:14px;font-family:inherit;cursor:pointer;margin-top:6px}
+  #cpDemo .paybtn:hover{filter:brightness(1.06)}
+  #cpDemo .paybtn.dark{background:#0b1220}
+  #cpDemo .secure{text-align:center;font-size:10.5px;color:#9aa0aa;margin-top:12px}
+  #cpDemo .stat{display:flex;gap:9px;margin-bottom:9px}
+  #cpDemo .stat .box{flex:1;background:#fff;border:1px solid #ece8f6;border-radius:12px;padding:12px}
+  #cpDemo .stat .box .n{font-family:'Sora';font-weight:800;font-size:16px;color:#2a1a4a}
+  #cpDemo .stat .box .l{font-size:10px;color:#9aa0aa}
+  #cpDemo .trow{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #ece8f6;border-radius:12px;padding:10px 12px;margin-bottom:8px}
+  #cpDemo .trow .d{flex:1}
+  #cpDemo .trow b{font-size:12.5px;display:block}
+  #cpDemo .trow small{font-size:10.5px;color:#9aa0aa}
+  #cpDemo .trow .ok{font-size:11px;font-weight:700;color:#16a34a}
+</style>
+<section class="section" style="background:var(--bg3)">
+  <div class="wrap">
+    <div class="demo">
+      <div class="demo-txt">
+        <h2>Essayez la page de paiement</h2>
+        <p>Choisissez un moyen de paiement — Wave, carte bancaire ou crypto — puis validez. La même API Cipay orchestre les trois et confirme l'encaissement.</p>
+        <span class="demo-hint">👆 Changez d'onglet et validez le paiement</span>
+      </div>
+      <div class="iphone" style="--accent:#7c3aed" id="cpDemo">
+        <div class="iscreen">
+          <div class="ihole"></div>
+
+          <div class="iview" data-view="wave">
+            <div class="chead"><b>Paiement sécurisé</b><span>Commande #CMD-1001 · Boutique Awa</span></div>
+            <div class="cbody">
+              <div class="amt"><div class="big">5 000 XOF</div><small>Montant à régler</small></div>
+              <div class="brand-row"><div class="blogo" style="background:#1dc8ff">W</div><div><b>Wave</b><small>Mobile Money · sans frais client</small></div></div>
+              <div class="fld"><label>Numéro Wave</label><div class="v">+225 07 00 00 00 00</div></div>
+              <button class="paybtn" onclick="cpToast('✅ Paiement réussi — 5 000 XOF via Wave')">Payer 5 000 XOF</button>
+              <div class="secure">🔒 Traité par Cipay · webhook signé HMAC-SHA256</div>
+            </div>
+          </div>
+
+          <div class="iview" data-view="carte" hidden>
+            <div class="chead"><b>Paiement sécurisé</b><span>Commande #CMD-1001 · Boutique Awa</span></div>
+            <div class="cbody">
+              <div class="amt"><div class="big">5 000 XOF</div><small>Montant à régler</small></div>
+              <div class="brand-row"><div class="blogo" style="background:linear-gradient(135deg,#635bff,#3d2fb3)">💳</div><div><b>Carte bancaire</b><small>Visa · Mastercard</small></div></div>
+              <div class="fld"><label>Numéro de carte</label><div class="v">4242 4242 4242 4242</div></div>
+              <div class="fld"><label>Expiration · CVC</label><div class="v">12 / 27 · •••</div></div>
+              <button class="paybtn" onclick="cpToast('✅ Paiement réussi — 5 000 XOF par carte')">Payer 5 000 XOF</button>
+              <div class="secure">🔒 3-D Secure · aucune donnée carte stockée chez le marchand</div>
+            </div>
+          </div>
+
+          <div class="iview" data-view="crypto" hidden>
+            <div class="chead"><b>Paiement sécurisé</b><span>Commande #CMD-1001 · Boutique Awa</span></div>
+            <div class="cbody">
+              <div class="amt"><div class="big">≈ 8,20 USDT</div><small>Équivalent de 5 000 XOF</small></div>
+              <div class="brand-row"><div class="blogo" style="background:#26a17b">₮</div><div><b>Crypto — USDT / BTC</b><small>Réseau TRC-20 · via passerelle OxaPay</small></div></div>
+              <div class="fld"><label>Adresse de dépôt</label><div class="v" style="font-size:11px;word-break:break-all">TXY…c1p4y…a9Kd2</div></div>
+              <button class="paybtn dark" onclick="cpToast('✅ Paiement confirmé — 8,20 USDT reçus')">J'ai envoyé le paiement</button>
+              <div class="secure">🔒 Conversion figée · crédit dès confirmation on-chain</div>
+            </div>
+          </div>
+
+          <div class="iview" data-view="recu" hidden>
+            <div class="chead"><b>Tableau de bord marchand</b><span>Boutique Awa · aujourd'hui</span></div>
+            <div class="cbody">
+              <div class="stat">
+                <div class="box"><div class="n">142 500</div><div class="l">Encaissé (XOF)</div></div>
+                <div class="box"><div class="n">28</div><div class="l">Paiements</div></div>
+              </div>
+              <div style="font-size:11px;font-weight:700;color:#2a1a4a;margin:12px 2px 8px">Dernières transactions</div>
+              <div class="trow"><div class="blogo" style="width:30px;height:30px;font-size:14px;background:#1dc8ff">W</div><div class="d"><b>5 000 XOF · Wave</b><small>CMD-1001 · il y a 1 min</small></div><span class="ok">Réussi</span></div>
+              <div class="trow"><div class="blogo" style="width:30px;height:30px;font-size:14px;background:#635bff">💳</div><div class="d"><b>12 000 XOF · Carte</b><small>CMD-0998 · il y a 22 min</small></div><span class="ok">Réussi</span></div>
+              <div class="trow"><div class="blogo" style="width:30px;height:30px;font-size:14px;background:#f77f00">O</div><div class="d"><b>3 500 XOF · Orange Money</b><small>CMD-0997 · il y a 40 min</small></div><span class="ok">Réussi</span></div>
+              <div class="secure" style="margin-top:6px">📒 Grand livre équilibré · débit = crédit</div>
+            </div>
+          </div>
+
+          <div class="itoast" id="cpToastEl"></div>
+          <div class="itabs">
+            <button data-tab="wave" class="on"><span class="ti">📱</span>Wave</button>
+            <button data-tab="carte"><span class="ti">💳</span>Carte</button>
+            <button data-tab="crypto"><span class="ti">₿</span>Crypto</button>
+            <button data-tab="recu"><span class="ti">📊</span>Reçus</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var phone=document.getElementById('cpDemo');
+  var tabs=phone.querySelectorAll('.itabs button');
+  var views=phone.querySelectorAll('.iview');
+  tabs.forEach(function(b){b.addEventListener('click',function(){
+    tabs.forEach(function(t){t.classList.remove('on');}); b.classList.add('on');
+    var v=b.getAttribute('data-tab');
+    views.forEach(function(x){x.hidden = x.getAttribute('data-view')!==v;});
+  });});
+  var t=document.getElementById('cpToastEl'),tm;
+  window.cpToast=function(msg){t.textContent=msg;t.classList.add('show');clearTimeout(tm);tm=setTimeout(function(){t.classList.remove('show');},2400);};
+})();
+</script>
+
+<section class="section">
+  <div class="wrap">
+    <p class="lead-intro">Conçue à Abidjan par <a href="/a-propos.html" style="color:#7c3aed;font-weight:600">EGSCI</a>, Cipay est une passerelle pensée pour les marchands d'Afrique de l'Ouest : accepter le Mobile Money que tout le monde utilise, sans renoncer à la carte bancaire ni à la crypto, et tout réconcilier au centime près.</p>
+
+    <h2>Trois familles de paiement, une seule intégration</h2>
+    <div class="cards">
+      <div class="card"><div class="ic" style="background:#f3edff;border-color:#e2d6ff">📱</div><h4>Mobile Money</h4><p>Wave, Orange Money, MTN MoMo, Moov Money, Djamo — les portefeuilles les plus utilisés en Afrique de l'Ouest.</p></div>
+      <div class="card"><div class="ic" style="background:#f3edff;border-color:#e2d6ff">💳</div><h4>Carte bancaire</h4><p>Visa et Mastercard pour vos clients internationaux, en XOF comme à l'étranger.</p></div>
+      <div class="card"><div class="ic" style="background:#f3edff;border-color:#e2d6ff">₿</div><h4>Crypto</h4><p>Encaissez en stablecoins (USDT) ou en Bitcoin via une passerelle dédiée, converti pour vous.</p></div>
+    </div>
+
+    <h2 style="margin-top:40px">Une architecture faite pour durer</h2>
+    <ul>
+      <li><strong>Une API REST unique</strong> — un seul appel <code>/v1/payments</code> pour tous les canaux ; chaque provider partage la même interface, en ajouter un ne change rien à votre code.</li>
+      <li><strong>Webhooks signés HMAC-SHA256</strong> — vos serveurs sont notifiés en temps réel, avec relivraison automatique en cas d'échec.</li>
+      <li><strong>Grand livre en partie double</strong> — chaque mouvement est équilibré (débit = crédit), les montants sont des entiers : jamais d'écart de centime, une réconciliation fiable.</li>
+      <li><strong>Tableau de bord marchand</strong> — soldes, transactions, répartition par canal, export CSV, gestion des clés API et des webhooks.</li>
+      <li><strong>Sécurité intégrée</strong> — clés API dont seul le hash est stocké, idempotence sur la création de paiement, identifiants providers chiffrés au repos (AES-256-GCM).</li>
+    </ul>
+
+    <h2 style="margin-top:40px">Pour qui ?</h2>
+    <div class="cards">
+      <div class="card"><div class="ic" style="background:#f3edff;border-color:#e2d6ff">🛍️</div><h4>Commerces & e-commerce</h4><p>Une page de paiement hébergée, ou l'intégration directe dans votre boutique.</p></div>
+      <div class="card"><div class="ic" style="background:#f3edff;border-color:#e2d6ff">🧩</div><h4>Plateformes & SaaS</h4><p>Encaissez pour vos utilisateurs avec des webhooks et une comptabilité claire.</p></div>
+      <div class="card"><div class="ic" style="background:#f3edff;border-color:#e2d6ff">🌍</div><h4>Multi-devises</h4><p>Le XOF au cœur, l'international en carte et en crypto quand vous en avez besoin.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="cta-box violet">
+      <h2>Cipay arrive bientôt</h2>
+      <p>La démonstration bout en bout fonctionne et les canaux sont prêts à recevoir leurs connecteurs. Vous êtes marchand, plateforme ou partenaire technique ? Écrivez-nous pour rejoindre les premiers.</p>
+      <a href="mailto:contact@egs.ci?subject=Cipay%20%E2%80%94%20Devenir%20partenaire" class="btn btn-light">Écrire à contact@egs.ci</a>
+    </div>
+    <div class="related">
+      <a href="/evostudio.html"><b>EvoStudio 📧</b><span>Notre suite d'emailing professionnelle.</span></a>
+      <a href="/ma-vigi.html"><b>Ma Vigi 🛡️</b><span>L'application de vigilance citoyenne en Côte d'Ivoire.</span></a>
+      <a href="/a-propos.html"><b>À propos d'EGSCI</b><span>Le studio technologique derrière Cipay.</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="/logo-egsci.png" alt="EGS Côte d'Ivoire" class="lg" />
+        <p>EGS Côte d'Ivoire (EGSCI SARL) — studio d'édition logicielle et de développement sur mesure, à Abidjan.</p>
+      </div>
+      <div class="foot-col"><h5>Produits</h5><a href="/evostudio.html">EvoStudio</a><a href="/ma-vigi.html">Ma Vigi</a><a href="/cipay.html">Cipay</a><a href="/sur-mesure.html">Sur mesure</a></div>
+      <div class="foot-col"><h5>Société</h5><a href="/a-propos.html">À propos</a><a href="mailto:contact@egs.ci">contact@egs.ci</a><a href="/">Accueil</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2018–2026 EGSCI SARL — EGS Côte d'Ivoire.</span>
+      <span>RCCM CI-ABJ-2018-B-10429 · Abidjan, Côte d'Ivoire 🇨🇮</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
