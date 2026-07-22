@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>GeoBrowser — navigateur privé multi-pays (IP résidentielle) | EGSCI</title>
+<meta name="description" content="GeoBrowser : navigateur de bureau axé confidentialité qui vous laisse naviguer depuis le pays de votre choix via des IP résidentielles. Comptes, profils par pays, protection anti-fuite WebRTC/DNS, test d'étanchéité intégré. Windows et macOS."/>
+<meta name="keywords" content="navigateur privé, IP résidentielle, confidentialité, accès régional, VPN alternative, protection vie privée, WebRTC, EGSCI"/>
+<meta name="robots" content="index, follow, max-image-preview:large"/><meta name="theme-color" content="#0c1410"/>
+<link rel="canonical" href="https://egs.ci/geobrowser.html"/><link rel="icon" href="/favicon.png" type="image/png"/>
+<meta property="og:type" content="article"/><meta property="og:title" content="GeoBrowser — navigateur privé multi-pays (IP résidentielle)"/><meta property="og:description" content="Naviguez depuis le pays de votre choix, protégez votre vie privée, testez votre étanchéité. Application de bureau Windows et macOS par EGSCI."/><meta property="og:url" content="https://egs.ci/geobrowser.html"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[
+ {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://egs.ci/"},{"@type":"ListItem","position":2,"name":"GeoBrowser","item":"https://egs.ci/geobrowser.html"}]},
+ {"@type":"SoftwareApplication","name":"GeoBrowser","operatingSystem":"Windows, macOS","applicationCategory":"SecurityApplication","url":"https://egs.ci/geobrowser.html","inLanguage":"fr-FR","description":"Navigateur de bureau axé confidentialité : naviguez depuis le pays de votre choix via des adresses IP résidentielles, avec comptes utilisateurs, profils par pays, protection anti-fuite WebRTC/DNS et test d'étanchéité intégré.","publisher":{"@type":"Organization","name":"EGSCI SARL","url":"https://egs.ci/"}}
+]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/page.css"/></head><body>
+<div class="nav-wrap"><nav class="nav">
+  <a href="/" class="brand"><img src="/logo-egsci.png" alt="EGS Côte d'Ivoire"/></a>
+  <div class="nav-links"><a href="/evostudio.html">EvoStudio</a><a href="/ma-vigi.html">Ma Vigi</a><a href="/geobrowser.html" class="active">GeoBrowser</a><a href="/sur-mesure.html">Sur mesure</a><a href="/a-propos.html">À propos</a></div>
+  <div class="nav-cta"><a href="mailto:contact@egs.ci?subject=GeoBrowser%20—%20me%20prévenir%20au%20lancement" class="btn btn-primary" style="background:#06b6d4">Être prévenu ↗</a></div>
+</nav></div>
+<header class="phero cyan"><div class="wrap">
+  <div class="crumb"><a href="/">Accueil</a> › GeoBrowser</div>
+  <span class="tag">● Navigateur de bureau · Bientôt</span>
+  <h1>Naviguez depuis le pays de votre choix, en privé.</h1>
+  <p class="lead">GeoBrowser est un navigateur de bureau axé confidentialité. Choisissez votre région de sortie, naviguez via une adresse IP résidentielle et vérifiez, d'un clic, que rien ne fuit. Comptes, profils par pays et cloisonnement des cookies inclus.</p>
+  <div class="cta"><a href="mailto:contact@egs.ci?subject=GeoBrowser%20—%20me%20prévenir%20au%20lancement" class="btn btn-light">Me prévenir au lancement</a><a href="/sur-mesure.html" class="btn btn-ghost">Nos services →</a></div>
+</div></header>
+<style>
+/* ── Variante d'accent CYAN (locale à cette page) ── */
+.phero.cyan{background:radial-gradient(820px 480px at 78% -10%,rgba(6,182,212,.28),transparent 58%),linear-gradient(165deg,#071417 55%,#062a30 100%)}
+.phero.cyan .tag{background:rgba(6,182,212,.14);border-color:rgba(6,182,212,.42);color:#67e8f9}
+.cta-box.cyan{background:linear-gradient(120deg,#06b6d4,#0891b2)}
+
+/* ── Démo : fenêtre de navigateur ── */
+.gb-win{flex:1;min-width:300px;max-width:560px;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.10);box-shadow:0 30px 70px rgba(0,0,0,.45);background:#0b1417;--accent:#06b6d4}
+.gb-top{display:flex;align-items:center;gap:8px;padding:10px 12px;background:#0e1b1f;border-bottom:1px solid rgba(255,255,255,.07)}
+.gb-dots{display:flex;gap:6px}.gb-dots i{width:11px;height:11px;border-radius:50%;display:block}
+.gb-dots i:nth-child(1){background:#ff5f57}.gb-dots i:nth-child(2){background:#febc2e}.gb-dots i:nth-child(3){background:#28c840}
+.gb-badge{margin-left:auto;display:flex;align-items:center;gap:6px;font:600 12px/1 Inter,sans-serif;color:#67e8f9;background:rgba(6,182,212,.13);border:1px solid rgba(6,182,212,.38);padding:6px 10px;border-radius:999px;white-space:nowrap}
+.gb-badge .flg{font-size:14px}
+.gb-addr{display:flex;align-items:center;gap:8px;padding:9px 12px;background:#0b1417;border-bottom:1px solid rgba(255,255,255,.06)}
+.gb-lock{color:#28c840;font-size:12px}
+.gb-url{flex:1;font:500 12.5px/1 Inter,sans-serif;color:#cbd5e1;background:#132227;border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:8px 11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gb-tabs{display:flex;gap:6px;padding:10px 12px 4px;flex-wrap:wrap}
+.gb-tabs button{cursor:pointer;font:600 12.5px/1 Inter,sans-serif;color:#9fb4bb;background:transparent;border:1px solid rgba(255,255,255,.10);border-radius:999px;padding:7px 12px;transition:.18s}
+.gb-tabs button.on{color:#062a30;background:#06b6d4;border-color:#06b6d4}
+.gb-view{padding:16px;min-height:150px}
+.gb-view[hidden]{display:none}
+.gb-ipcard{background:#0f1e22;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:16px}
+.gb-ipcard .ipline{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font:500 13px/1.4 Inter,sans-serif;color:#cbd5e1}
+.gb-ipcard .ipline:last-child{border-bottom:0}
+.gb-ipcard .k{color:#7c9198}.gb-ipcard .v{color:#e6f6fa;font-weight:700}
+.gb-chip{display:inline-flex;align-items:center;gap:6px;font:700 11px/1 Inter,sans-serif;padding:5px 9px;border-radius:999px}
+.gb-ok{color:#34d399;background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.34)}
+.gb-leak{padding:4px 0}
+.gb-leak .row{display:flex;align-items:center;gap:10px;padding:9px 0;font:600 13px/1 Inter,sans-serif;color:#cbd5e1;border-bottom:1px solid rgba(255,255,255,.05)}
+.gb-leak .row:last-child{border-bottom:0}
+.gb-leak .dot{width:9px;height:9px;border-radius:50%;background:#34d399;box-shadow:0 0 0 4px rgba(52,211,153,.15)}
+.gb-toast{position:absolute;left:50%;bottom:16px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#062a30;border:1px solid rgba(6,182,212,.5);color:#a5f3fc;font:600 12.5px/1 Inter,sans-serif;padding:10px 15px;border-radius:10px;transition:.25s;white-space:nowrap}
+.gb-toast.show{opacity:1;transform:translate(-50%,0)}
+.gb-wrap{position:relative}
+</style>
+<section class="section" style="background:var(--bg3)"><div class="wrap">
+  <div class="demo"><div class="demo-txt"><h2>Une région, un clic.</h2><p>Sélectionnez le pays de sortie : GeoBrowser route la fenêtre via une adresse IP résidentielle de cette région et affiche le badge de confirmation. L'onglet « Test d'étanchéité » vérifie que votre IP réelle et le WebRTC ne fuient pas.</p><span class="demo-hint">👆 Changez de pays, puis ouvrez le test d'étanchéité</span></div>
+  <div class="gb-wrap">
+  <div class="gb-win">
+    <div class="gb-top"><span class="gb-dots"><i></i><i></i><i></i></span><span class="gb-badge"><span class="flg" id="gbFlag">🇨🇮</span> IP résidentielle · <span id="gbCty">Côte d'Ivoire</span></span></div>
+    <div class="gb-addr"><span class="gb-lock">🔒</span><span class="gb-url" id="gbUrl">https://ipinfo.io</span></div>
+    <div class="gb-tabs">
+      <button data-c="ci" class="on" onclick="gbPick(this)">🇨🇮 Côte d'Ivoire</button>
+      <button data-c="fr" onclick="gbPick(this)">🇫🇷 France</button>
+      <button data-c="us" onclick="gbPick(this)">🇺🇸 États-Unis</button>
+      <button data-c="leak" onclick="gbPick(this)">🧪 Test d'étanchéité</button>
+    </div>
+    <div class="gb-view" id="gbGeo">
+      <div class="gb-ipcard">
+        <div class="ipline"><span class="k">Adresse IP vue</span><span class="v" id="gbIp">102.140.xx.xx</span></div>
+        <div class="ipline"><span class="k">Pays de sortie</span><span class="v" id="gbCty2">🇨🇮 Côte d'Ivoire</span></div>
+        <div class="ipline"><span class="k">Type d'IP</span><span class="v"><span class="gb-chip gb-ok">✓ Résidentielle</span></span></div>
+        <div class="ipline"><span class="k">Profil</span><span class="v" id="gbProf">Perso · cookies isolés</span></div>
+      </div>
+    </div>
+    <div class="gb-view" id="gbLeak" hidden>
+      <div class="gb-ipcard gb-leak">
+        <div class="row"><span class="dot"></span>IP de sortie cohérente avec le pays choisi</div>
+        <div class="row"><span class="dot"></span>Aucune fuite WebRTC (IP publique masquée)</div>
+        <div class="row"><span class="dot"></span>Requêtes DNS confinées au tunnel</div>
+        <div class="row"><span class="dot"></span>IP réelle non exposée</div>
+      </div>
+    </div>
+  </div>
+  <div class="gb-toast" id="gbToast">Fenêtre routée · IP résidentielle 🇨🇮</div>
+  </div>
+  </div></div></section>
+<script>
+(function(){
+  var M={
+    ci:{flag:'🇨🇮',name:"Côte d'Ivoire",ip:'102.140.xx.xx',toast:"Fenêtre routée · IP résidentielle 🇨🇮"},
+    fr:{flag:'🇫🇷',name:'France',ip:'92.184.xx.xx',toast:"Fenêtre routée · IP résidentielle 🇫🇷"},
+    us:{flag:'🇺🇸',name:'États-Unis',ip:'73.221.xx.xx',toast:"Fenêtre routée · IP résidentielle 🇺🇸"}
+  };
+  var cur='ci';
+  window.gbPick=function(btn){
+    document.querySelectorAll('.gb-tabs button').forEach(function(b){b.classList.remove('on')});
+    btn.classList.add('on');
+    var c=btn.getAttribute('data-c');
+    var geo=document.getElementById('gbGeo'),leak=document.getElementById('gbLeak');
+    if(c==='leak'){
+      geo.hidden=true;leak.hidden=false;
+      document.getElementById('gbUrl').textContent='geobrowser://etancheite';
+      gbToast('Test d’étanchéité : protégé ✓');
+      return;
+    }
+    geo.hidden=false;leak.hidden=true;cur=c;
+    var d=M[c];
+    document.getElementById('gbFlag').textContent=d.flag;
+    document.getElementById('gbCty').textContent=d.name;
+    document.getElementById('gbCty2').textContent=d.flag+' '+d.name;
+    document.getElementById('gbIp').textContent=d.ip;
+    document.getElementById('gbUrl').textContent='https://ipinfo.io';
+    gbToast(d.toast);
+  };
+  var t;
+  function gbToast(msg){
+    var el=document.getElementById('gbToast');
+    el.textContent=msg;el.classList.add('show');
+    clearTimeout(t);t=setTimeout(function(){el.classList.remove('show')},1900);
+  }
+})();
+</script>
+<section class="section"><div class="wrap">
+  <p class="lead-intro">GeoBrowser est édité par <a href="/a-propos.html" style="color:#06b6d4;font-weight:600">EGSCI</a>. C'est une application de bureau (Windows et macOS) pensée pour la confidentialité et l'accès régional : vous choisissez votre région de sortie, vous naviguez via une IP résidentielle fournie par votre abonnement proxy, et chaque profil garde ses cookies isolés.</p>
+  <h2>Ce que fait GeoBrowser</h2>
+  <div class="cards">
+    <div class="card"><div class="ic">🌍</div><h4>Choisissez votre région</h4><p>42 pays disponibles au lancement d'un profil. La fenêtre sort via une IP résidentielle du pays choisi, avec un badge de confirmation en temps réel.</p></div>
+    <div class="card"><div class="ic">🛡️</div><h4>Protection de la vie privée</h4><p>Neutralisation des fuites WebRTC et confinement DNS : votre adresse réelle reste masquée derrière la région de sortie.</p></div>
+    <div class="card"><div class="ic">🧪</div><h4>Test d'étanchéité intégré</h4><p>Un bouton vérifie que l'IP de sortie correspond au pays, qu'aucune IP publique ne fuit et alerte immédiatement si quelque chose s'expose.</p></div>
+  </div>
+  <h2 style="margin-top:40px">Comment ça marche</h2>
+  <ul>
+    <li><strong>Créez un compte</strong> — email et mot de passe stockés localement et chiffrés (scrypt).</li>
+    <li><strong>Connectez votre fournisseur</strong> — IPRoyal, Decodo, Bright Data ou tout fournisseur personnalisé (host/port/identifiants). GeoBrowser ne génère pas d'IP : il se branche sur votre abonnement.</li>
+    <li><strong>Créez des profils</strong> — un par pays (et ville optionnelle), chacun avec ses cookies et son stockage isolés.</li>
+    <li><strong>Lancez et naviguez</strong> — la fenêtre s'ouvre routée via l'IP résidentielle ; la page d'accueil et le badge confirment le pays et l'IP.</li>
+    <li><strong>Vérifiez l'étanchéité</strong> — le test intégré contrôle la cohérence IP/pays et l'absence de fuite WebRTC à tout moment.</li>
+  </ul>
+</div></section>
+<section class="section alt"><div class="wrap">
+  <div class="cta-box cyan"><h2>GeoBrowser arrive bientôt</h2><p>L'application n'est pas encore ouverte au public. Écrivez-nous pour être prévenu du lancement ou pour un accès anticipé.</p><a href="mailto:contact@egs.ci?subject=GeoBrowser%20—%20me%20prévenir%20au%20lancement" class="btn btn-light">Me prévenir au lancement</a></div>
+  <div class="related"><a href="/evostudio.html"><b>EvoStudio 📧</b><span>Suite d'emailing et d'extraction professionnelle.</span></a><a href="/ma-vigi.html"><b>Ma Vigi 🛡️</b><span>Signalement citoyen des dangers, sur mobile.</span></a><a href="/a-propos.html"><b>À propos d'EGSCI</b><span>Studio d'édition logicielle à Abidjan.</span></a></div>
+</div></section>
+<footer><div class="wrap"><div class="foot-grid">
+  <div><img src="/logo-egsci.png" alt="EGS Côte d'Ivoire" class="lg"/><p>EGS Côte d'Ivoire (EGSCI SARL) — studio d'édition logicielle et de développement sur mesure, à Abidjan.</p></div>
+  <div class="foot-col"><h5>Produits</h5><a href="/evostudio.html">EvoStudio</a><a href="/ma-vigi.html">Ma Vigi</a><a href="/geobrowser.html">GeoBrowser</a><a href="/sur-mesure.html">Sur mesure</a></div>
+  <div class="foot-col"><h5>Société</h5><a href="/a-propos.html">À propos</a><a href="mailto:contact@egs.ci">contact@egs.ci</a><a href="/">Accueil</a></div>
+</div><div class="foot-bottom"><span>© 2018–2026 EGSCI SARL — EGS Côte d'Ivoire.</span><span>RCCM CI-ABJ-2018-B-10429 · Abidjan, Côte d'Ivoire 🇨🇮</span></div></div></footer>
+</body></html>
